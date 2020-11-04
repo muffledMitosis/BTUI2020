@@ -7,19 +7,19 @@ function App() {
   return (
     <div>
       <div className="mainLanding">
-        <img className="left_logo" src={consts.left_log} />
+        <img alt="" className="left_logo" src={consts.left_log} />
         <div className="countDown"><Countdown /></div>
-        <img className="main_btui_text" src={consts.main_btui_text}/>
-        <img className="main_back" src={consts.main_back}/>
+        <img alt="" className="main_btui_text" src={consts.main_btui_text}/>
+        <img alt="" className="main_back" src={consts.main_back}/>
         <div className="register_button">Register</div>
       </div>
 
       <div className="cdSection">
         <div className="mainCount">
-          <img className="pLogo" src={consts.btuiPLogo} />
+          <img alt="" className="pLogo" src={consts.btuiPLogo} />
           <Countdown looks="bigCountdown" />
         </div>
-        <img className="bgTextureTwo" src={consts.background_texture}/>
+        <img alt="" className="bgTextureTwo" src={consts.background_texture}/>
       </div>
     </div>
   );
