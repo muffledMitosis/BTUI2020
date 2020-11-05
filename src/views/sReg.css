@@ -210,3 +210,7 @@ ul {
 .setBlock {
     display: block;
 }
+
+.warningPSTD {
+    font-size: 0.8rem;
+}

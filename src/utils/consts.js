@@ -7,4 +7,8 @@ const btuiPLogo = "https://firebasestorage.googleapis.com/v0/b/btui-2020.appspot
 const fancy_logo = "https://firebasestorage.googleapis.com/v0/b/btui-2020.appspot.com/o/assets%2FfancySmallLogo.png?alt=media&token=92fe81ae-de8c-4981-9ff5-33e5444d56e3";
 const fancy_logo_fat = "https://firebasestorage.googleapis.com/v0/b/btui-2020.appspot.com/o/assets%2FfancySmallLogoFat.png?alt=media&token=f4b21d0b-0f14-493c-8144-eeed4f80881e";
 
-export { background_texture, left_log, main_btui_text, right_sold, main_back, btuiPLogo, fancy_logo, fancy_logo_fat }
+const crest_and_logo_mobile = "https://firebasestorage.googleapis.com/v0/b/btui-2020.appspot.com/o/assets%2Fmobile%2Fcrest_and_logo_mobile.png?alt=media&token=f28b091c-63ea-41d8-8a5d-4912035d33f7";
+const main_background_mobile = "https://firebasestorage.googleapis.com/v0/b/btui-2020.appspot.com/o/assets%2Fmobile%2Fmain_background_mobile.png?alt=media&token=2bd9b0c4-4688-45bd-8272-e30a6b02d414";
+const main_logo_mobile = "https://firebasestorage.googleapis.com/v0/b/btui-2020.appspot.com/o/assets%2Fmobile%2Fmain_logo_mobile.png?alt=media&token=bdf901a4-a094-4ac0-9238-48898be52dc7";
+
+export { background_texture, left_log, main_btui_text, right_sold, main_back, btuiPLogo, fancy_logo, fancy_logo_fat, crest_and_logo_mobile, main_background_mobile, main_logo_mobile }

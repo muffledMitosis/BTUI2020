@@ -8,6 +8,8 @@ import { useForm } from "react-hook-form";
 
 import {fancy_logo, fancy_logo_fat} from '../utils/consts';
 
+import {db} from '../utils/firebase';
+
 function SchoolRegProcess() {
     // const [parts, setParts] = useState(4);
 
@@ -43,10 +45,36 @@ function SchoolRegProcess() {
         if((progress) > parts)
         {
             console.log(thePeeps);
+
             setParticipantStyles("setNone");
             setFormSpaceShow("setNone");
             setfinalSpaceShow("setBlock");
         }
+    }
+
+    const yesButtonClick = ()=>{
+        // TODO: Show Loading icon instead of button
+        let baseRef = db.collection('users').doc('schools').collection('schoolsRegistered');
+        baseRef.add({
+            "schoolName": schoolInfo["schoolName"],
+            "numberOfParticipants": Number(schoolInfo["parts"]),
+            "TICcontact": schoolInfo["ticContact"],
+            "email": schoolInfo["email"]
+        }).then((docRef)=>{
+            console.log("Done Writing school data to db");
+
+            thePeeps.forEach(person =>{
+                baseRef.doc(docRef.id).collection('participants').add({
+                    "firstName": person["fName"],
+                    "lastName": person["lName"],
+                    "email": person["email"]
+                }).then(console.log("didPersonWrite")).catch(e=>console.log(e));
+            });
+
+            console.log("participant write complete");
+                // TODO: Hide progress wheel
+                // GOT CONGRATS PAGE (show them their ids)
+        }).catch(e=>console.log(e));
     }
 
     let elem = (
@@ -65,9 +93,16 @@ function SchoolRegProcess() {
                             <label>No. Of Participants</label>
                         </div>
                         <div className="user-box">
+                            <input type="email" name="email" ref={individials.register({ required: true })} />
+                            <label>Club Email Address</label>
+                        </div>
+                        <div className="user-box">
                             <input type="tel" name="ticContact" maxLength="10" minLength="10" ref={register({ required: true })} />
                             <label>Contact of TIC</label>
                         </div>
+                    </div>
+                    <div><p className="warningPSTD">* Please Input valid email addresses since BTUI access codes will be 
+                        emailed to you, of without you will not be able to access the events of BTUI</p>
                     </div>
                     <div className="ProgressDiv"><p>{progress} of {parts}</p><button>Next</button></div>
                 </form>
@@ -88,6 +123,9 @@ function SchoolRegProcess() {
                             <label>Email Address</label>
                         </div>
                     </div>
+                    <div><p className="warningPSTD">* Please Input valid email addresses since BTUI access codes will be 
+                        emailed to you, of without you will not be able to access the events of BTUI</p>
+                    </div>
                     <div className="ProgressDiv"><p>{progress} of {parts}</p><button>Next</button></div>
                 </form>
                 </div>
@@ -97,7 +135,7 @@ function SchoolRegProcess() {
                     </p>
                     <h4>Participants</h4>
                     <ul>{thePeeps.map(peep => <li>{peep["fName"] + " " + peep["lName"]}</li>)}</ul>
-                    <div className="ProgressDiv"><button onClick={()=>console.log("ela")}>Yes</button><button onClick={()=>window.location.href="/"}>No</button></div>
+                    <div className="ProgressDiv"><button onClick={yesButtonClick}>Yes</button><button onClick={()=>window.location.href="/registration/school"}>No</button></div>
                 </div>
             </div>
         </div>

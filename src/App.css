@@ -106,6 +106,54 @@ body {
     }
 }
 
+.left_logo_mobile {
+    display: none;
+}
+
+.main_btui_text_mobile {
+    display: none;
+}
+
+.main_back_mobile {
+    display: none;
+}
+
+@media (max-width: 800px) {
+    .register_button {
+        top: unset;
+        bottom: 10rem;
+    }
+    .main_back_mobile {
+        display: block;
+        width: 100vw;
+        margin: 0;
+        padding: 0;
+    }
+    .main_back {
+        display: none;
+    }
+    .main_btui_text_mobile {
+        display: block;
+        position: absolute;
+        width: 90vw;
+        top: 30vw;
+    }
+    .main_btui_text {
+        display: none;
+    }
+    .left_logo {
+        display: none;
+    }
+    .left_logo_mobile {
+        display: block;
+        position: absolute;
+        width: 60vw;
+    }
+    .countDown {
+        display: none;
+    }
+}
+
 @media (max-width: 700px) {
     .bigCountdown {
         font-size: 4rem;
