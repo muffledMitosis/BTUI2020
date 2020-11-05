@@ -4,5 +4,7 @@ const main_btui_text = "https://firebasestorage.googleapis.com/v0/b/btui-2020.ap
 const right_sold = "https://firebasestorage.googleapis.com/v0/b/btui-2020.appspot.com/o/assets%2Fright-sold.png?alt=media&token=1fd22c7c-a250-419e-92aa-cfaad4e3cfe3";
 const main_back = "https://firebasestorage.googleapis.com/v0/b/btui-2020.appspot.com/o/assets%2Fmain_back.png?alt=media&token=76fda63f-e2ec-41ad-8959-3f52db9b9120";
 const btuiPLogo = "https://firebasestorage.googleapis.com/v0/b/btui-2020.appspot.com/o/assets%2FbtuiPLogo.png?alt=media&token=39a46586-24b5-4079-980f-c3adada8ea83";
+const fancy_logo = "https://firebasestorage.googleapis.com/v0/b/btui-2020.appspot.com/o/assets%2FfancySmallLogo.png?alt=media&token=92fe81ae-de8c-4981-9ff5-33e5444d56e3";
+const fancy_logo_fat = "https://firebasestorage.googleapis.com/v0/b/btui-2020.appspot.com/o/assets%2FfancySmallLogoFat.png?alt=media&token=f4b21d0b-0f14-493c-8144-eeed4f80881e";
 
-export { background_texture, left_log, main_btui_text, right_sold, main_back, btuiPLogo }
+export { background_texture, left_log, main_btui_text, right_sold, main_back, btuiPLogo, fancy_logo, fancy_logo_fat }
