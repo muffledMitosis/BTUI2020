@@ -15,7 +15,7 @@ button {
     border: none;
     color: white;
     background-color: #ffffff00;
-    padding: 0.4rem 0.5rem;
+    padding: 0.5rem 1rem;
     border: solid #03e9f4 1px;
 }
 
@@ -195,12 +195,18 @@ img {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+    margin-top: 2rem;
 }
 
 p,
 h4,
-ul {
+ul,
+h5 {
     color: white;
+}
+
+.uidStyleText {
+    font-weight: 200;
 }
 
 .setNone {
@@ -211,6 +217,30 @@ ul {
     display: block;
 }
 
-.warningPSTD {
+.warningPSTD,
+.accesscodeWarning {
     font-size: 0.8rem;
+}
+
+.accesscodeWarning {
+    margin-top: 3rem;
+}
+
+.singleThingLOLOLO {
+    margin-top: 3rem;
+    text-align: center;
+}
+
+hr {
+    border-color: #03e9f4;
+    margin: 3rem 2rem;
+}
+
+.sRegDiscrodServerJoinButton {}
+
+.sRegDiscrodServerJoinButtonDiv {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
 }

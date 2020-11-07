@@ -14,6 +14,8 @@ function GuestRegProcess() {
     const [initialView, setInitialView] = useState("setBlock");
     const [confView, setConfView] = useState("setNone");
 
+    const [access_code, setAccess_code] = useState("");
+
     const { register, handleSubmit} = useForm();
 
     const onSubmit = data => {
@@ -24,9 +26,16 @@ function GuestRegProcess() {
             "lastName": data["lName"],
             "email": data["email"],
             "tel": data["mobNum"]
-        }).then(()=>{
+        }).then((personRef)=>{
             console.log("done writing");
             // TODO: goto congrats page and show UIDs
+            db.collection('users').doc('individuals').collection('individualsRegistered').doc(personRef.id).update({
+                "uid": (personRef.id + "_IND")
+            }).then(()=>{
+                setAccess_code(personRef.id + "_IND");
+                setInitialView("setNone");
+                setConfView("setBlock");
+            });
         }).catch(e=>console.log(e));
     };
 
@@ -61,7 +70,12 @@ function GuestRegProcess() {
                     </form>
                 </div>
                 <div className={"confInfoDiv " + confView}>
-
+                    <p>Congrats! You've successfully registered for BTUI 2020. Here's your access-code.</p>
+                    <p className="uidStyleText singleThingLOLOLO">{access_code}</p>
+                    <p className="accesscodeWarning">* Keep this access code with you at all times and DO NOT share it with anyone, you'll be needing this to access certain parts of the BTUI website</p>
+                    <hr />
+                    <p>Join the BTUI Discord Server, where we'll be posting regular updates of Talk sessions, competitoins and other related events</p>
+                    <div className="sRegDiscrodServerJoinButtonDiv"><button className="sRegDiscrodServerJoinButton" onClick={()=>{window.location.href="https://discord.gg/d8ZZdhHEDk"}}>J O I N</button></div>
                 </div>
             </div> 
         </div>

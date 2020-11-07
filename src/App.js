@@ -13,6 +13,7 @@ import {
   Route,
   Link
 } from "react-router-dom";
+import RegistrationIntro from './views/registrationIntro';
 
 function App() {
   return (
@@ -28,7 +29,13 @@ function App() {
               <img alt="" className="main_btui_text_mobile" src={consts.main_logo_mobile} />
               <img alt="" className="main_back" src={consts.main_back}/>
               <img alt="" className="main_back_mobile" src={consts.main_background_mobile} />
-              <div className="register_button">Register</div>
+              <div className="register_button" onClick={()=>{window.location.href="/registration"}}>Register</div>
+            </div>
+
+            <div className="infoDiv">
+              <img className="pcInfoDiv" alt="" src={consts.info_div_pc} />
+              <img className="mobileInfoDiv" alt="" src={consts.mobile_info_div_one} />
+              <img className="mobileInfoDiv" alt="" src={consts.mobile_info_div_two} />
             </div>
 
             <div className="cdSection">
@@ -40,6 +47,7 @@ function App() {
             </div>
           </div>
         </Route>
+        <Route exact path="/registration"><RegistrationIntro /></Route>
         <Route exact path="/registration/school"><SchoolRegProcess /></Route>
         <Route exact path="/registration/individual"><GuestRegProcess /></Route>
       </Switch>

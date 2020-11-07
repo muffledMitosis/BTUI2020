@@ -1,0 +1,15 @@
+.explenationDiv {
+    color: white;
+}
+
+.registerButtonsDiv {
+    display: flex;
+    flex-direction: column;
+    padding: 0rem 4rem;
+}
+
+.registerButtonsDiv>button {
+    margin-top: 1rem;
+    padding-top: 0.8rem;
+    padding-bottom: 0.8rem;
+}

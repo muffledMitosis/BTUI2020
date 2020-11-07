@@ -17,13 +17,17 @@ function SchoolRegProcess() {
 
     const [progress, setProgress] = useState(1);
     const [parts, setParts] = useState(4);
+
     const [thePeeps, setThePeeps] = useState([]);
+    const [peepIDs, setThePeepIDs] = useState([]);
+
     const [schoolInfo, setSchoolInfo] = useState([]);
 
     const [initialStyles, setInitialStyles] = useState("setBlock");
     const [participantStyles, setParticipantStyles] = useState("setNone");
     const [formSpaceShow, setFormSpaceShow] = useState("setBlock");
     const [finalSpaceShow, setfinalSpaceShow] = useState("setNone");
+    const [congratsSpaceShow, setCongratsSpaceShow] = useState("setNone");
     
     const { register, handleSubmit, watch, errors } = useForm();
     const individials = useForm();
@@ -42,7 +46,7 @@ function SchoolRegProcess() {
         setProgress(pastProg => pastProg+1);
         console.log(data);
         setThePeeps(preP => [...preP, data]);
-        if((progress) > parts)
+        if((progress) >= parts)
         {
             console.log(thePeeps);
 
@@ -55,11 +59,12 @@ function SchoolRegProcess() {
     const yesButtonClick = ()=>{
         // TODO: Show Loading icon instead of button
         let baseRef = db.collection('users').doc('schools').collection('schoolsRegistered');
+        console.log(schoolInfo);
         baseRef.add({
             "schoolName": schoolInfo["schoolName"],
             "numberOfParticipants": Number(schoolInfo["parts"]),
             "TICcontact": schoolInfo["ticContact"],
-            "email": schoolInfo["email"]
+            "email": String(schoolInfo["email"])
         }).then((docRef)=>{
             console.log("Done Writing school data to db");
 
@@ -68,12 +73,19 @@ function SchoolRegProcess() {
                     "firstName": person["fName"],
                     "lastName": person["lName"],
                     "email": person["email"]
-                }).then(console.log("didPersonWrite")).catch(e=>console.log(e));
+                }).then(personRef=>{
+                    baseRef.doc(docRef.id).collection('participants').doc(personRef.id).update({"uid": (personRef.id + "_SCH")}).then(()=>{
+                        console.log("write complete");
+                        setThePeepIDs(preIDs => [...preIDs, {name: (`${person["fName"]} ${person["lName"]}`),id: (personRef.id + "_SCH")}]);
+                    }).catch(e=>console.log(e));
+                }).catch(e=>console.log(e));
             });
 
             console.log("participant write complete");
                 // TODO: Hide progress wheel
                 // GOT CONGRATS PAGE (show them their ids)
+                setfinalSpaceShow("setNone");
+                setCongratsSpaceShow("setBlock");
         }).catch(e=>console.log(e));
     }
 
@@ -93,7 +105,7 @@ function SchoolRegProcess() {
                             <label>No. Of Participants</label>
                         </div>
                         <div className="user-box">
-                            <input type="email" name="email" ref={individials.register({ required: true })} />
+                            <input type="email" name="email" ref={register({ required: true })} />
                             <label>Club Email Address</label>
                         </div>
                         <div className="user-box">
@@ -135,7 +147,16 @@ function SchoolRegProcess() {
                     </p>
                     <h4>Participants</h4>
                     <ul>{thePeeps.map(peep => <li>{peep["fName"] + " " + peep["lName"]}</li>)}</ul>
-                    <div className="ProgressDiv"><button onClick={yesButtonClick}>Yes</button><button onClick={()=>window.location.href="/registration/school"}>No</button></div>
+                    <div className="ProgressDiv"><button onClick={yesButtonClick}>Y E S</button><button onClick={()=>window.location.href="/registration/school"}>N O</button></div>
+                </div>
+                <div className={"CongratsSpace " + congratsSpaceShow}>
+                    <p>Congrats! You've successfully registered for BTUI 2020</p>
+                    <h5>Access Codes for each participant</h5>
+                    <ul>{peepIDs.map(peep=><li><p>{peep["name"]}</p><p className="uidStyleText">{peep["id"]}</p></li>)}</ul>
+                    <p className="accesscodeWarning">* Keep these access codes with you at all times and do not share these with anyone, you'll be needing this to access certain parts of the BTUI website</p>
+                    <hr />
+                    <p>Join the BTUI Discord Server, where we'll be posting regular updates of Talk sessions, competitoins and other related events</p>
+                    <div className="sRegDiscrodServerJoinButtonDiv"><button className="sRegDiscrodServerJoinButton" onClick={()=>{window.location.href="https://discord.gg/d8ZZdhHEDk"}}>J O I N</button></div>
                 </div>
             </div>
         </div>
