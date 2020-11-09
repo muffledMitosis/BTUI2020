@@ -19,32 +19,15 @@ function App() {
           <div>
             <div className="mainLanding">
               <img alt="" className="left_logo" src={consts.left_log} />
-              <img
-                alt=""
-                className="left_logo_mobile"
-                src={consts.crest_and_logo_mobile}
-              />
+              <img alt="" className="left_logo_mobile" src={consts.crest_and_logo_mobile} />
               <div className="countDown">
                 <Countdown />
               </div>
-              <img
-                alt=""
-                className="main_btui_text"
-                src={consts.main_btui_text}
-              />
-              <img
-                alt=""
-                className="main_btui_text_mobile"
-                src={consts.main_logo_mobile}
-              />
+              <img alt="" className="main_btui_text" src={consts.main_btui_text} />
+              <img alt="" className="main_btui_text_mobile" src={consts.main_logo_mobile} />
               <img alt="" className="main_back" src={consts.main_back} />
-              <img
-                alt=""
-                className="main_back_mobile"
-                src={consts.main_background_mobile}
-              />
-              <button
-                className="register_button"
+              <img alt="" className="main_back_mobile" src={consts.main_background_mobile} />
+              <button className="register_button"
                 onClick={() => {
                   window.location.href = "/registration";
                   analytics.logEvent("register_button_click");
@@ -64,16 +47,8 @@ function App() {
 
             <div className="infoDiv">
               <img className="pcInfoDiv" alt="" src={consts.info_div_pc} />
-              <img
-                className="mobileInfoDiv"
-                alt=""
-                src={consts.mobile_info_div_one}
-              />
-              <img
-                className="mobileInfoDiv"
-                alt=""
-                src={consts.mobile_info_div_two}
-              />
+              <img className="mobileInfoDiv" alt="" src={consts.mobile_info_div_one} />
+              <img className="mobileInfoDiv" alt="" src={consts.mobile_info_div_two} />
             </div>
           </div>
         </Route>
