@@ -29,8 +29,16 @@ function App() {
               <img alt="" className="main_btui_text_mobile" src={consts.main_logo_mobile} />
               <img alt="" className="main_back" src={consts.main_back}/>
               <img alt="" className="main_back_mobile" src={consts.main_background_mobile} />
-              <div className="register_button" onClick={()=>{window.location.href="/registration"}}>Register</div>
+              <div className="register_button" onClick={()=>{window.location.href="/registration"; analytics.logEvent("register_button_click");}}>Register</div>
             </div>
+
+            {/* <div className="cdSection"> */}
+              <div className="mainCount">
+                <img alt="" className="pLogo" src={consts.btuiPLogo} />
+                <Countdown looks="bigCountdown" />
+              </div>
+              {/* <img alt="" className="bgTextureTwo" src={consts.background_texture}/>
+            </div> */}
 
             <div className="infoDiv">
               <img className="pcInfoDiv" alt="" src={consts.info_div_pc} />
@@ -38,13 +46,6 @@ function App() {
               <img className="mobileInfoDiv" alt="" src={consts.mobile_info_div_two} />
             </div>
 
-            <div className="cdSection">
-              <div className="mainCount">
-                <img alt="" className="pLogo" src={consts.btuiPLogo} />
-                <Countdown looks="bigCountdown" />
-              </div>
-              <img alt="" className="bgTextureTwo" src={consts.background_texture}/>
-            </div>
           </div>
         </Route>
         <Route exact path="/registration"><RegistrationIntro /></Route>
