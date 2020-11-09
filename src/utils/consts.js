@@ -11,7 +11,7 @@ const crest_and_logo_mobile = "https://firebasestorage.googleapis.com/v0/b/btui-
 const main_background_mobile = "https://firebasestorage.googleapis.com/v0/b/btui-2020.appspot.com/o/assets%2Fmobile%2Fmain_background_mobile.png?alt=media&token=2bd9b0c4-4688-45bd-8272-e30a6b02d414";
 const main_logo_mobile = "https://firebasestorage.googleapis.com/v0/b/btui-2020.appspot.com/o/assets%2Fmobile%2Fmain_logo_mobile.png?alt=media&token=bdf901a4-a094-4ac0-9238-48898be52dc7";
 
-const info_div_pc = "https://firebasestorage.googleapis.com/v0/b/btui-2020.appspot.com/o/assets%2FinfoDiv_pc.png?alt=media&token=47486492-4382-4bb6-93d6-311f48c6a1cd";
+const info_div_pc = "https://firebasestorage.googleapis.com/v0/b/btui-2020.appspot.com/o/assets%2FinfoDiv_pc.png?alt=media&token=70a499de-83c6-48ad-8ba9-568d05ebd4a9";
 const mobile_info_div_one = "https://firebasestorage.googleapis.com/v0/b/btui-2020.appspot.com/o/assets%2FmobileInfoDiv_one.png?alt=media&token=5caf4621-2aa2-490c-8357-d78c7274ddab";
 const mobile_info_div_two = "https://firebasestorage.googleapis.com/v0/b/btui-2020.appspot.com/o/assets%2FmobileInfoDiv_two.png?alt=media&token=f6f7e4e2-9cb6-49ec-8da7-ea42fe60cf1c";
 
