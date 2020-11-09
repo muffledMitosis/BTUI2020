@@ -1,0 +1,33 @@
+.pwBody {
+  width: 100%;
+  height: 100%;
+}
+
+.pwLine {
+  width: 50%;
+  margin-top: 0;
+  margin-bottom: 4rem;
+}
+
+.pwTopic {
+  padding-top: 1rem;
+  color: whitesmoke;
+}
+
+.pwRulesSection {
+  padding: 4px;
+}
+
+.pwRulesH2 {
+  color: whitesmoke;
+  margin-left: 4px;
+}
+
+.pwRulesList {
+  color: aqua;
+  font-weight: 200;
+}
+
+.pwRulesList > li {
+  padding-bottom: 10px;
+}
