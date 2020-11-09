@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 
 // Use this file for styles
+// MAKE SURE TO USE CLASSES XD
 import './programwiz.css';
 
 const btnClick = () => {
