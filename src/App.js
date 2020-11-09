@@ -14,6 +14,7 @@ import {
   Link
 } from "react-router-dom";
 import RegistrationIntro from './views/registrationIntro';
+import Programwiz from './views/programwiz';
 
 function App() {
   return (
@@ -51,6 +52,8 @@ function App() {
         <Route exact path="/registration"><RegistrationIntro /></Route>
         <Route exact path="/registration/school"><SchoolRegProcess /></Route>
         <Route exact path="/registration/individual"><GuestRegProcess /></Route>
+
+        <Route exact path="/programwiz"><Programwiz /></Route>
       </Switch>
     </Router>
   );
