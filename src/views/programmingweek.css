@@ -1,0 +1,17 @@
+@media (max-width: 768px) { 
+  .display-2 {
+    font-size: 3.5rem;
+  }
+}
+
+.text-aqua {
+  color: aqua!important;
+}
+
+.bg-aqua {
+  background-color: aqua!important;
+}
+
+.outline-aqua {
+  border-color: aqua!important;
+}
