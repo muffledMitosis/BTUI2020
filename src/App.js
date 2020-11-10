@@ -15,6 +15,7 @@ import {
 } from "react-router-dom";
 import RegistrationIntro from './views/registrationIntro';
 import Programwiz from './views/programwiz';
+import Timeline from './widgets/Timeline';
 
 function App() {
   return (
@@ -32,6 +33,11 @@ function App() {
               <img alt="" className="main_back_mobile" src={consts.main_background_mobile} />
               <div className="register_button" onClick={()=>{window.location.href="/registration"; analytics.logEvent("register_button_click");}}>Register</div>
             </div>
+
+            <div>
+              <Timeline />
+            </div>
+
 
             {/* <div className="cdSection"> */}
               <div className="mainCount">
