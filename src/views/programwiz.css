@@ -1,33 +1,17 @@
-.pwBody {
-  width: 100%;
-  height: 100%;
+@media (max-width: 768px) { 
+  .display-2 {
+    font-size: 3.5rem;
+  }
 }
 
-.pwLine {
-  width: 50%;
-  margin-top: 0;
-  margin-bottom: 4rem;
-}
-
-.pwTopic {
-  padding-top: 1rem;
-  color: whitesmoke;
-}
-
-.pwRulesSection {
-  padding: 4px;
-}
-
-.pwRulesH2 {
-  color: whitesmoke;
-  margin-left: 4px;
-}
-
-.pwRulesList {
+.text-aqua {
   color: aqua;
-  font-weight: 200;
 }
 
-.pwRulesList > li {
-  padding-bottom: 10px;
+.bg-aqua {
+  background-color: aqua;
+}
+
+.outline-aqua {
+  border-color: aqua;
 }

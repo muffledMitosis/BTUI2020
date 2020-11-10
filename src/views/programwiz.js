@@ -9,24 +9,23 @@ const btnClick = () => {
 };
 
 function Programwiz() {
-  document.getElementsByTagName("BODY")[0].style["background"] =
-    "linear-gradient(#141e30, #243b55)";
-  document.getElementsByTagName("BODY")[0].style["height"] = "100%";
+  //document.getElementsByTagName("BODY")[0].style["background"] = "linear-gradient(#141e30, #243b55)";
+  document.getElementsByTagName("BODY")[0].style["background"] = "#323232";
   let elem = (
-    <div className="container pwBody">
-      <h1 className="display-1 pwTopic">Programwiz</h1>
-      <hr color="white" />
-      <div className="pwRulesSection">
-        <h2 className="pwRulesH2">Rules And Regulations</h2>
-        <ol className="pwRulesList">
-          <li># Rule 1</li>
-          <li># Rule 2</li>
-          <li># Rule 3</li>
-          <li># Rule 4</li>
-        </ol>
+    <div className="container-md">
+      <div className="jumbotron shadow bg-dark text-aqua pb-4 mb-4">
+        <h1 className="display-2 mb-4">Programwiz</h1>
+        <p className="lead"><strong>Programwiz</strong> is a competitive programming competition. This is the time to test your programming skills and what you learnt from today. Get ready wizards! Lets code...</p>
+        <hr className="bg-light my-4" size="1" />
+        <p>Click the below button to enter the competition, you will be redirected to the official competition platform.</p>
+        <button className="btn btn-lg btn-block outline-aqua bg-aqua" onClick={btnClick}>Enter Contest</button>
       </div>
-      <div>
-        <button onClick={btnClick}>Enter Contest</button>
+      <div className="alert bg-transparent outline-aqua text-aqua" role="alert">
+        <h4 className="alert-heading">This is the end of your day's adventure!</h4>
+        <p className="text-aqua">Aww yeah, you successfully completed the day of <strong>Programming</strong>. 
+        Stay tuned with us for more talk sessions and competitions. Hope you had a lot of fun. Thank You!</p>
+        <hr className="outline-aqua" />
+        <p className="mb-0 font-weight-lighter">Beyound The UI. A project by Royal College Computer Society.</p>
       </div>
     </div>
   );
