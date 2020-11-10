@@ -5,13 +5,13 @@
 }
 
 .text-aqua {
-  color: aqua;
+  color: aqua!important;
 }
 
 .bg-aqua {
-  background-color: aqua;
+  background-color: aqua!important;
 }
 
 .outline-aqua {
-  border-color: aqua;
+  border-color: aqua!important;
 }

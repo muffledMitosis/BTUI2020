@@ -10,6 +10,7 @@ import { analytics } from "./utils/firebase";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import RegistrationIntro from "./views/registrationIntro";
 import Programwiz from "./views/programwiz";
+import Dashbash from "./views/dashBash";
 
 function App() {
   return (
@@ -64,6 +65,9 @@ function App() {
 
         <Route exact path="/programwiz">
           <Programwiz />
+        </Route>
+        <Route exact path="/dashbash">
+          <Dashbash />
         </Route>
       </Switch>
     </Router>

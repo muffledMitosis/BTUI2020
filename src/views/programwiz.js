@@ -2,7 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 
-import "./programwiz.css";
+import "./programmingweek.css";
 
 const btnClick = () => {
   console.log("LEMME IN");
