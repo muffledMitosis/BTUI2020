@@ -11,6 +11,7 @@ import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import RegistrationIntro from "./views/registrationIntro";
 import Programwiz from "./views/programwiz";
 import Dashbash from "./views/dashBash";
+import Timeline from './widgets/Timeline';
 
 function App() {
   return (
@@ -37,6 +38,11 @@ function App() {
                 Register
               </button>
             </div>
+
+            <div>
+              <Timeline />
+            </div>
+
 
             {/* <div className="cdSection"> */}
             <div className="mainCount">
