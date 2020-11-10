@@ -4,12 +4,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 
 import "./programmingweek.css";
 
-const btnClick = () => {
-  console.log("LEMME IN");
-};
-
 function Dashbash() {
-  //document.getElementsByTagName("BODY")[0].style["background"] = "linear-gradient(#141e30, #243b55)";
   document.getElementsByTagName("BODY")[0].style["background"] = "#323232";
   let elem = (
     <div className="container-md">
