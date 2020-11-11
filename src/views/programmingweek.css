@@ -15,3 +15,7 @@
 .outline-aqua {
   border-color: aqua!important;
 }
+
+.outline-warning {
+  border-color: #ffc107!important;
+}

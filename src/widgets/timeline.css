@@ -1,23 +1,20 @@
 @import url('https://fonts.googleapis.com/css?family=Chivo:300,300i,400,400i,700,700i,900,900i|Saira+Extra+Condensed:100,200,300,400,500,600,700,800|Saira:100,200,300,400,500,600,700,800');
 
-/* Import */
-
-
-/* Variables */
-
-
-/* Base */
-
-body {
+.timeline-body {
     background: #252827;
     font-size: 16px;
+    padding-top: 2px;
+    padding-bottom: 2px;  
 }
 
-p {
+.timeline-body p {
     font-weight: 300;
+    margin-top: 5px;
+    margin-bottom: 5px;
 }
 
-a {
+
+.timeline-body a {
     color: #6c6d6d;
     text-decoration: none;
     text-transform: uppercase;
@@ -31,20 +28,22 @@ a {
     float: right;
 }
 
-a:hover {
+
+.timeline-body a:hover {
     color: #ffffff;
     background: #004ffc;
     border-bottom: .35em solid black;
 }
 
-strong {
+
+.timeline-body strong {
     font-weight: 600;
 }
 
-h1 {
+.timelineH1 {
     font-family: 'Saira', sans-serif;
     letter-spacing: 1.5px;
-    color: #ffffff;
+    color: aqua;
     font-weight: 400;
     font-size: 2.4em;
 }
@@ -58,7 +57,7 @@ h1 {
 /* Timeline */
 
 .timeline {
-    border-left: 4px solid #004ffc;
+    border-left: 4px solid aqua;
     border-bottom-right-radius: 4px;
     border-top-right-radius: 4px;
     background: rgba(255, 255, 255, 0.03);
@@ -73,13 +72,13 @@ h1 {
     list-style: none;
     text-align: left;
     font-weight: 100;
-    max-width: 30%;
+    max-width: 50%;
 }
 
-@media(max-width: 1000px) {
+@media(max-width: 768px) {
     .timeline {
-        max-width: 50%;
-        margin-right: 2rem;
+        max-width: 80%;
+        margin-right: 0rem;
     }
     .timeline h1 {
         font-size: 0.5rem;
@@ -106,6 +105,7 @@ h1 {
     letter-spacing: 1.5px;
     font-weight: 400;
     font-size: 1.4em;
+    color: aqua;
 }
 
 .timeline .event {
@@ -129,8 +129,8 @@ h1 {
 }
 
 .timeline .event:before {
-    left: -217.5px;
-    color: rgba(255, 255, 255, 0.4);
+    left: -205px;
+    color: white;
     content: attr(data-date);
     text-align: right;
     font-weight: 100;
@@ -140,7 +140,7 @@ h1 {
 }
 
 .timeline .event:after {
-    box-shadow: 0 0 0 4px #004ffc;
+    box-shadow: 0 0 0 4px aqua;
     left: -57.85px;
     background: #313534;
     border-radius: 50%;

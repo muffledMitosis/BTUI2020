@@ -5,9 +5,9 @@ import './timeline.css';
 
 function Timeline() {
     let elem = (
-        <div>
+        <div class="timeline-body">
             <div id="timeline-content">
-                <h1>Timeline</h1>
+                <h1 className="timelineH1">Timeline</h1>
 
                 <ul className="timeline">
                 <li class="event" data-date="15th">
@@ -21,13 +21,13 @@ function Timeline() {
                 </li>
                 <li class="event" id="date" data-date="17th">
                     <h3>🔧 Competitive Programming, an Introduction </h3>
-                    <p>10:00AM - A live talk session By Adhithya Narasinghe</p>
-                    <p> 2:00PM - "Programmiz" a competitive programming competition</p>
+                    <p>10:00AM - A live talk session By Adithya Narasinghe ( Senior Software Engineer at oDoc ) on  the Competitive Programming</p>
+                    <p> 2:00PM - "Programwiz" a competitive programming competition</p>
                 </li>
                 <li class="event" id="date" data-date="18th">
                     <h3>🐦 App Development with Flutter </h3>
-                    <p>10:00AM - A live talk session by Dilum De Silva, the founder of The Colombo Flutter Community on the very basics of Flutter</p>
-                    <p> 2:00PM - "The Counter app challenge" a competition on creating the best counter app design using flutter</p>
+                    <p>10:00AM - A live talk session by Dilum De Silva ( Community Lead at The Colombo Flutter Community ) on the Basics of Flutter</p>
+                    <p> 2:00PM - "Dash-Bash" a challenge on creating the best mobile app designed using Flutter</p>
                 </li>
                 <li class="event" id="date" data-date="19th">
                     <h3>🦹‍♂️ CTF Challenge </h3>

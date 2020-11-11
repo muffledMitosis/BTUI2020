@@ -13,8 +13,6 @@ import Programwiz from "./views/programwiz";
 import Dashbash from "./views/dashBash";
 import Timeline from './widgets/Timeline';
 
-import 'bootstrap/dist/css/bootstrap.min.css';
-
 function App() {
   return (
     <Router>
