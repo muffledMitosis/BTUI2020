@@ -15,6 +15,12 @@ const info_div_pc = "https://firebasestorage.googleapis.com/v0/b/btui-2020.appsp
 const mobile_info_div_one = "https://firebasestorage.googleapis.com/v0/b/btui-2020.appspot.com/o/assets%2FmobileInfoDiv_one.png?alt=media&token=5caf4621-2aa2-490c-8357-d78c7274ddab";
 const mobile_info_div_two = "https://firebasestorage.googleapis.com/v0/b/btui-2020.appspot.com/o/assets%2FmobileInfoDiv_two.png?alt=media&token=f6f7e4e2-9cb6-49ec-8da7-ea42fe60cf1c";
 
+const FR_DOTA2 = "https://firebasestorage.googleapis.com/v0/b/btui-2020.appspot.com/o/assets%2Ffrostbyte%2FDT2.png?alt=media&token=9487f2d0-22f4-45dd-a323-2ae292624386";
+const FR_VAL = "https://firebasestorage.googleapis.com/v0/b/btui-2020.appspot.com/o/assets%2Ffrostbyte%2FVAL.png?alt=media&token=720a77fe-b6c5-4be2-a5cd-48d25fe20168";
+const FR_MC = "https://firebasestorage.googleapis.com/v0/b/btui-2020.appspot.com/o/assets%2Ffrostbyte%2FMC.png?alt=media&token=e7370e3a-bf36-4aa3-bd85-d46e65bc9387";
+
+const FR_LOGO = "https://firebasestorage.googleapis.com/v0/b/btui-2020.appspot.com/o/assets%2Ffrostbyte%2Flogo.png?alt=media&token=7808e012-e046-4067-a5df-d1a2fd158ab2";
+
 export {
     background_texture,
     left_log,
@@ -29,5 +35,10 @@ export {
     main_logo_mobile,
     info_div_pc,
     mobile_info_div_one,
-    mobile_info_div_two
+    mobile_info_div_two,
+
+    FR_DOTA2,
+    FR_VAL,
+    FR_MC,
+    FR_LOGO
 }
