@@ -12,6 +12,9 @@ import RegistrationIntro from "./views/registrationIntro";
 import Programwiz from "./views/programwiz";
 import Dashbash from "./views/dashBash";
 import Timeline from './widgets/Timeline';
+import Frostbyte from "./views/frostbyte";
+
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
   return (
@@ -47,7 +50,7 @@ function App() {
             {/* <div className="cdSection"> */}
             <div className="mainCount">
               <img alt="" className="pLogo" src={consts.btuiPLogo} />
-              <Countdown looks="bigCountdown" />
+              <Countdown looks="bigCountdown" time="Nov 15, 2020 09:30:00" />
             </div>
             {/* <img alt="" className="bgTextureTwo" src={consts.background_texture}/>
             </div> */}
@@ -75,6 +78,7 @@ function App() {
         <Route exact path="/dashbash">
           <Dashbash />
         </Route>
+        <Route exact path="/frostbyte"><Frostbyte /></Route>
       </Switch>
     </Router>
   );
