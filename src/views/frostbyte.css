@@ -48,12 +48,15 @@
     }
 }
 
-@media (max-width: 900px) {
+@media (max-width: 1000px) {
     .FRL_ITEM {
         background-size: 320%;
     }
     .fb_main_head {
-        width: 70vw;
+        width: 80vw;
+    }
+    .unified_btui_logo_FB {
+        width: 40vw;
     }
 }
 

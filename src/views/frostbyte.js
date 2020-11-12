@@ -28,7 +28,7 @@ function Frostbyte() {
                 <Countdown looks="fr_timer" time="Nov 20, 2020 10:30:00" />
             </div>
             <div className="reg_div_fr">
-                <div onClick={()=>{console.log("Valorant Click")}} className="GameRegCard gameRegValorant"><h2>Valorant</h2></div>
+                <div onClick={()=>{window.location.href = "/registration/valorant"}} className="GameRegCard gameRegValorant"><h2>Valorant</h2></div>
                 <div onClick={()=>{console.log("Dota 2 Click")}} className="GameRegCard gameRegDT"><h2>Dota 2</h2></div>
                 <div onClick={()=>{console.log("Minecraft Click")}} className="GameRegCard gameRegMC"><h2>Minecraft</h2></div>
             </div>

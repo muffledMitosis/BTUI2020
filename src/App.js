@@ -15,6 +15,7 @@ import Timeline from './widgets/Timeline';
 import Frostbyte from "./views/frostbyte";
 
 import 'bootstrap/dist/css/bootstrap.min.css';
+import ValorantRegProcess from "./views/valorantRegProcess";
 
 function App() {
   return (
@@ -70,6 +71,9 @@ function App() {
         </Route>
         <Route exact path="/registration/individual">
           <GuestRegProcess />
+        </Route>
+        <Route exact path="/registration/valorant">
+          <ValorantRegProcess />
         </Route>
 
         <Route exact path="/programwiz">
