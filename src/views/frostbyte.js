@@ -8,7 +8,10 @@ import Countdown from '../widgets/countdown';
 function Frostbyte() {
     let elem = (
         <div>
-            <div className="fb_main_div"><img className="fb_main_head" alt="" src={consts.FR_LOGO} /></div>
+            <div className="fb_main_div">
+                <img className="fb_main_head" alt="" src={consts.FR_LOGO} />
+                <img className="unified_btui_logo_FB" alt="" src={consts.U_BTUI_LOGO} />
+            </div>
             <Carousel controls={false}>
                 <Carousel.Item className="FRL_ITEM">
                     <img className="d-block w-100 " src={consts.FR_DOTA2} />
@@ -33,6 +36,7 @@ function Frostbyte() {
                 </Carousel.Item>
             </Carousel>
             <div className="FR_COUNTER">
+                <h1 className="FR_REGISTER_NOW_TXT" data-text="Register Now!">Register Now!</h1>
                 <Countdown looks="fr_timer" time="Nov 20, 2020 10:30:00" />
             </div>
             <div className="reg_div_fr">

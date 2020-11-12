@@ -18,8 +18,9 @@ const mobile_info_div_two = "https://firebasestorage.googleapis.com/v0/b/btui-20
 const FR_DOTA2 = "https://firebasestorage.googleapis.com/v0/b/btui-2020.appspot.com/o/assets%2Ffrostbyte%2FDT2.png?alt=media&token=9487f2d0-22f4-45dd-a323-2ae292624386";
 const FR_VAL = "https://firebasestorage.googleapis.com/v0/b/btui-2020.appspot.com/o/assets%2Ffrostbyte%2FVAL.png?alt=media&token=720a77fe-b6c5-4be2-a5cd-48d25fe20168";
 const FR_MC = "https://firebasestorage.googleapis.com/v0/b/btui-2020.appspot.com/o/assets%2Ffrostbyte%2FMC.png?alt=media&token=e7370e3a-bf36-4aa3-bd85-d46e65bc9387";
-
 const FR_LOGO = "https://firebasestorage.googleapis.com/v0/b/btui-2020.appspot.com/o/assets%2Ffrostbyte%2Flogo.png?alt=media&token=7808e012-e046-4067-a5df-d1a2fd158ab2";
+
+const U_BTUI_LOGO = "https://firebasestorage.googleapis.com/v0/b/btui-2020.appspot.com/o/assets%2Funified_btui_logo.png?alt=media&token=595d827d-f3fd-4c6a-b095-b5bebf693dcb";
 
 export {
     background_texture,
@@ -36,6 +37,8 @@ export {
     info_div_pc,
     mobile_info_div_one,
     mobile_info_div_two,
+
+    U_BTUI_LOGO,
 
     FR_DOTA2,
     FR_VAL,
