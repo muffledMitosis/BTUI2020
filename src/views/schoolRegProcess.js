@@ -29,7 +29,7 @@ function SchoolRegProcess() {
     const [finalSpaceShow, setfinalSpaceShow] = useState("setNone");
     const [congratsSpaceShow, setCongratsSpaceShow] = useState("setNone");
     
-    const { register, handleSubmit, watch, errors } = useForm();
+    const { register, handleSubmit, watch, errors, setValue } = useForm();
     const individials = useForm();
     
     const onSubmit = data => {
@@ -122,6 +122,7 @@ function SchoolRegProcess() {
 
                 <form className={"participantInfoDiv " + participantStyles} onSubmit={individials.handleSubmit(participantOnSubmit)}>
                     <div >
+                        <h4 className="partText">Participant {(Number(progress)-1)} of {parts-1}</h4>
                         <div className="user-box">
                             <input type="text" name="fName" ref={individials.register({ required: true })} />
                             <label>First Name</label>

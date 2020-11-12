@@ -119,6 +119,7 @@ function ValorantRegProcess() {
 
 
                 <form className={"participantInfoDiv " + participantStyles} onSubmit={individials.handleSubmit(participantOnSubmit)}>
+                    <h4 className="partText">Participant {(Number(progress)-1)} of {parts-1}</h4>
                     <div >
                         <div className="user-box">
                             <input type="text" name="fName" ref={individials.register({ required: true })} />
