@@ -26,7 +26,7 @@ function App() {
               <img alt="" className="left_logo" src={consts.left_log} />
               <img alt="" className="left_logo_mobile" src={consts.crest_and_logo_mobile} />
               <div className="countDown">
-                <Countdown />
+                <Countdown time="Nov 15, 2020 09:30:00" />
               </div>
               <img alt="" className="main_btui_text" src={consts.main_btui_text} />
               <img alt="" className="main_btui_text_mobile" src={consts.main_logo_mobile} />
