@@ -13,14 +13,48 @@
 }
 
 .fb_main_div {
-    padding-top: 20vw;
     width: 100%;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     position: absolute;
     z-index: 10;
+}
+
+.FRL_DT {
+    background-image: url('https://firebasestorage.googleapis.com/v0/b/btui-2020.appspot.com/o/assets%2Ffrostbyte%2Fregis%2FDT_REG.png?alt=media&token=2b9f7712-c0ad-4b6b-917f-2557db2aba0a');
+}
+
+.FRL_VL {
+    background-image: url("https://firebasestorage.googleapis.com/v0/b/btui-2020.appspot.com/o/assets%2Ffrostbyte%2FVAL.png?alt=media&token=720a77fe-b6c5-4be2-a5cd-48d25fe20168");
+}
+
+.FRL_MC {
+    background-image: url("https://firebasestorage.googleapis.com/v0/b/btui-2020.appspot.com/o/assets%2Ffrostbyte%2FMC.png?alt=media&token=e7370e3a-bf36-4aa3-bd85-d46e65bc9387");
+}
+
+.FRL_ITEM {
+    width: 100vw;
+    height: 100vh;
+    background-size: 120%;
+    background-position: center;
+}
+
+@media (max-width: 1200px) {
+    .FRL_ITEM {
+        background-size: 200%;
+    }
+}
+
+@media (max-width: 900px) {
+    .FRL_ITEM {
+        background-size: 320%;
+    }
+    .fb_main_head {
+        width: 70vw;
+    }
 }
 
 .FRL_ITEM:after {
@@ -95,6 +129,7 @@
     background-size: 100%;
     transition-property: background-size color;
     transition-duration: 0.2s;
+    cursor: pointer;
 }
 
 .GameRegCard:hover {

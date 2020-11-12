@@ -13,26 +13,14 @@ function Frostbyte() {
                 <img className="unified_btui_logo_FB" alt="" src={consts.U_BTUI_LOGO} />
             </div>
             <Carousel controls={false}>
-                <Carousel.Item className="FRL_ITEM">
-                    <img className="d-block w-100 " src={consts.FR_DOTA2} />
-                    {/* <Carousel.Caption>
-                        <h3>Dota 2</h3>
-                        <p>Whatever Dota2 is lol, exciting? XD</p>
-                    </Carousel.Caption> */}
+                <Carousel.Item>
+                    <div className="FRL_ITEM FRL_DT"></div>
                 </Carousel.Item>
-                <Carousel.Item className="FRL_ITEM">
-                    <img className="d-block w-100 " src={consts.FR_VAL} />
-                    {/* <Carousel.Caption>
-                        <h3>Valorant</h3>
-                        <p>A game of unmatchable strategy and deadly gunplay</p>
-                    </Carousel.Caption> */}
+                <Carousel.Item>
+                    <div className="FRL_ITEM FRL_VL"></div>
                 </Carousel.Item>
-                <Carousel.Item className="FRL_ITEM">
-                    <img className="d-block w-100 " src={consts.FR_MC} />
-                    {/* <Carousel.Caption>
-                        <h3>Minecraft</h3>
-                        <p>Now who on Earth said Minecraft was boring?</p>
-                    </Carousel.Caption> */}
+                <Carousel.Item>
+                    <div className="FRL_ITEM FRL_MC"></div>
                 </Carousel.Item>
             </Carousel>
             <div className="FR_COUNTER">
