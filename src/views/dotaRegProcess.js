@@ -6,11 +6,11 @@ import {useState, useEffect} from 'react';
 
 import { useForm } from "react-hook-form";
 
-import {VAL_REG_LOGO} from '../utils/consts';
+import {DT_REG_LOG} from '../utils/consts';
 
 import {db} from '../utils/firebase';
 
-function ValorantRegProcess() {
+function DotaRegProcess() {
     // const [parts, setParts] = useState(4);
 
     document.getElementsByTagName("BODY")[0].style["background"] = "linear-gradient(#141e30, #243b55)";
@@ -60,7 +60,7 @@ function ValorantRegProcess() {
         // TODO: Show Loading icon instead of button
         console.log(schoolInfo);
         console.log(thePeeps);
-        let baseRef = db.collection('users').doc('frostbyte').collection('games').doc('valorant').collection('teamsRegistered');
+        let baseRef = db.collection('users').doc('frostbyte').collection('games').doc('dota').collection('teamsRegistered');
         baseRef.add({
             "teamName": schoolInfo["teamName"],
             "teamContact": schoolInfo["contact"],
@@ -73,7 +73,7 @@ function ValorantRegProcess() {
                     "firstName": person["fName"],
                     "lastName": person["lName"],
                     "email": person["email"],
-                    "riotID": person["riotID"],
+                    "mcUserName": person["dtUserName"],
                     "nic": person["nic"]
                 }).then(personRef=>{
                     baseRef.doc(docRef.id).collection('teamMembers').doc(personRef.id).update({"uid": (personRef.id + "_FRB")}).then(()=>{
@@ -94,7 +94,7 @@ function ValorantRegProcess() {
     let elem = (
         <div className="bigOneLol">
             <div className="login-box">
-                <div className="imgCont"><img src={VAL_REG_LOGO}/></div>
+                <div className="imgCont"><img src={DT_REG_LOG}/></div>
                 <div className={"FormSpace " + formSpaceShow}>
                 <form className={"initialInfoDiv " + initialStyles} onSubmit={handleSubmit(onSubmit)}>
                     <div >
@@ -133,8 +133,8 @@ function ValorantRegProcess() {
                             <label>Email Address</label>
                         </div>
                         <div className="user-box">
-                            <input type="text" name="riotID" ref={individials.register({ required: true })} />
-                            <label>Riot ID</label>
+                            <input type="text" name="dtUserName" ref={individials.register({ required: true })} />
+                            <label>In Game Username</label>
                         </div>
                         <div className="user-box">
                             <input type="text" name="nic" ref={individials.register()} />
@@ -156,7 +156,7 @@ function ValorantRegProcess() {
                     <div className="ProgressDiv"><button onClick={yesButtonClick}>Y E S</button><button onClick={()=>window.location.href="/registration/valorant"}>N O</button></div>
                 </div>
                 <div className={"CongratsSpace " + congratsSpaceShow}>
-                    <p>Congrats! You've successfully registered for Valorant</p>
+                    <p>Congrats! You've successfully registered for Minecraft</p>
                     <h5>Access Codes for each team member</h5>
                     <ul>{peepIDs.map(peep=><li><p>{peep["name"]}</p><p className="uidStyleText">{peep["id"]}</p></li>)}</ul>
                     <p className="accesscodeWarning">* Keep these access codes with you at all times and do not share these with anyone, you'll be needing this to access certain parts of the BTUI website</p>
@@ -171,4 +171,4 @@ function ValorantRegProcess() {
     return elem;
 }
 
-export default ValorantRegProcess;
+export default DotaRegProcess;

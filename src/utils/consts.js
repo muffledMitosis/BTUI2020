@@ -22,6 +22,7 @@ const FR_LOGO = "https://firebasestorage.googleapis.com/v0/b/btui-2020.appspot.c
 
 const VAL_REG_LOGO = "https://firebasestorage.googleapis.com/v0/b/btui-2020.appspot.com/o/assets%2Ffrostbyte%2FvalorantLogo.png?alt=media&token=dfc15429-b5b0-48ae-a34b-2f54924925dd";
 const MC_REG_LOGO = "https://firebasestorage.googleapis.com/v0/b/btui-2020.appspot.com/o/assets%2Ffrostbyte%2FminecraftLogo.png?alt=media&token=cab41bac-cbdc-4bd7-a5ae-5fc93262214e";
+const DT_REG_LOG = "https://firebasestorage.googleapis.com/v0/b/btui-2020.appspot.com/o/assets%2Ffrostbyte%2FdotaLogo.png?alt=media&token=61a412f0-f5b8-40a3-b7de-e56e5aa98509"
 
 const U_BTUI_LOGO = "https://firebasestorage.googleapis.com/v0/b/btui-2020.appspot.com/o/assets%2Funified_btui_logo.png?alt=media&token=595d827d-f3fd-4c6a-b095-b5bebf693dcb";
 
@@ -49,5 +50,6 @@ export {
     FR_LOGO,
 
     VAL_REG_LOGO,
-    MC_REG_LOGO
+    MC_REG_LOGO,
+    DT_REG_LOG
 }

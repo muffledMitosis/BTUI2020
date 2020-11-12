@@ -17,6 +17,7 @@ import Frostbyte from "./views/frostbyte";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import ValorantRegProcess from "./views/valorantRegProcess";
 import MinecraftRegProcess from "./views/minecraftRegProcess";
+import DotaRegProcess from "./views/dotaRegProcess";
 
 function App() {
   return (
@@ -78,6 +79,9 @@ function App() {
         </Route>
         <Route exact path="/registration/minecraft">
           <MinecraftRegProcess />
+        </Route>
+        <Route exact path="/registration/dota">
+            <DotaRegProcess />
         </Route>
 
         <Route exact path="/programwiz">
