@@ -16,6 +16,7 @@ import Frostbyte from "./views/frostbyte";
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import ValorantRegProcess from "./views/valorantRegProcess";
+import MinecraftRegProcess from "./views/minecraftRegProcess";
 
 function App() {
   return (
@@ -74,6 +75,9 @@ function App() {
         </Route>
         <Route exact path="/registration/valorant">
           <ValorantRegProcess />
+        </Route>
+        <Route exact path="/registration/minecraft">
+          <MinecraftRegProcess />
         </Route>
 
         <Route exact path="/programwiz">
