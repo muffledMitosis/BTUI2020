@@ -18,6 +18,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import ValorantRegProcess from "./views/valorantRegProcess";
 import MinecraftRegProcess from "./views/minecraftRegProcess";
 import DotaRegProcess from "./views/dotaRegProcess";
+import RocketLeagueRegProcess from "./views/rocketLeagueRegProcess";
 
 function App() {
   return (
@@ -82,6 +83,9 @@ function App() {
         </Route>
         <Route exact path="/registration/dota">
             <DotaRegProcess />
+        </Route>
+        <Route exact path="/registration/rocketleague">
+            <RocketLeagueRegProcess />
         </Route>
 
         <Route exact path="/programwiz">

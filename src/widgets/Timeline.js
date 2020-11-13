@@ -35,7 +35,7 @@ function Timeline() {
                 </li>
                 <li class="event" id="date" data-date="20th">
                     <h3>🎮 Frostbyte Esports tournament </h3>
-                    <p>10:00AM - An Esports tournament spanning 2 days including the games, Valorant, COD MW4, COD Mobile and PUBG Mobile</p>
+                    <p>10:00AM - An Esports tournament spanning 2 days including the games, Valorant, Rocket League, Dota 2 and Minecraft</p>
                 </li>
                 <li class="event" id="date" data-date="22nd">
                     <h3>🎮 BTUI Game Jam </h3>

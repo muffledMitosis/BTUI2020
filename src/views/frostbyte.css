@@ -119,6 +119,10 @@
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://firebasestorage.googleapis.com/v0/b/btui-2020.appspot.com/o/assets%2Ffrostbyte%2Fregis%2FMC_REG.png?alt=media&token=726b00ab-cb60-4b85-bc5d-8490dc5189e9');
 }
 
+.gameRegRL {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://firebasestorage.googleapis.com/v0/b/btui-2020.appspot.com/o/assets%2Ffrostbyte%2Fregis%2FRL_REG.jpg?alt=media&token=9a291780-6b46-45d1-bac5-a1a226fddc41');
+}
+
 .GameRegCard {
     display: flex;
     flex-direction: column;
@@ -401,4 +405,31 @@
     100% {
         transform: skew(-1deg);
     }
+}
+
+body {
+    background-color: rgb(51, 50, 63);
+}
+
+.frostbyteRulesDiv {
+    background-color: rgb(51, 50, 63);
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+}
+
+.frostbyteRulesDiv>h2 {
+    color: violet;
+    text-align: center;
+    padding: 3rem;
+}
+
+.frostbyteRulesDiv>h3 {
+    padding-left: 3rem;
+}
+
+.frostbyteRulesDiv>ol {
+    padding-left: 4rem;
+    padding-top: 1rem;
+    font-weight: 100;
 }
