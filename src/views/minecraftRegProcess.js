@@ -6,17 +6,17 @@ import {useState, useEffect} from 'react';
 
 import { useForm } from "react-hook-form";
 
-import {fancy_logo, fancy_logo_fat} from '../utils/consts';
+import {MC_REG_LOGO} from '../utils/consts';
 
 import {db} from '../utils/firebase';
 
-function SchoolRegProcess() {
+function MinecraftRegProcess() {
     // const [parts, setParts] = useState(4);
 
     document.getElementsByTagName("BODY")[0].style["background"] = "linear-gradient(#141e30, #243b55)";
 
     const [progress, setProgress] = useState(1);
-    const [parts, setParts] = useState(4);
+    const [parts, setParts] = useState(5);
 
     const [thePeeps, setThePeeps] = useState([]);
     const [peepIDs, setThePeepIDs] = useState([]);
@@ -29,11 +29,11 @@ function SchoolRegProcess() {
     const [finalSpaceShow, setfinalSpaceShow] = useState("setNone");
     const [congratsSpaceShow, setCongratsSpaceShow] = useState("setNone");
     
-    const { register, handleSubmit, watch, errors, setValue } = useForm();
+    const { register, handleSubmit, watch, errors } = useForm();
     const individials = useForm();
     
     const onSubmit = data => {
-        setParts(Number(data["parts"]) + 1);
+        // setParts(Number(data["parts"]) + 1);
         setProgress(pastProg => pastProg+1);
         setInitialStyles("setNone");
         setParticipantStyles("setBlock");
@@ -58,25 +58,26 @@ function SchoolRegProcess() {
 
     const yesButtonClick = ()=>{
         // TODO: Show Loading icon instead of button
-        let baseRef = db.collection('users').doc('schools').collection('schoolsRegistered');
         console.log(schoolInfo);
+        console.log(thePeeps);
+        let baseRef = db.collection('users').doc('frostbyte').collection('games').doc('minecraft').collection('teamsRegistered');
         baseRef.add({
-            "schoolName": schoolInfo["schoolName"],
-            "numberOfParticipants": Number(schoolInfo["parts"]),
-            "TICcontact": schoolInfo["ticContact"],
+            "teamName": schoolInfo["teamName"],
+            "teamContact": schoolInfo["contact"],
             "email": String(schoolInfo["email"])
         }).then((docRef)=>{
-            console.log("Done Writing school data to db");
+            console.log("Done Writing team data to db");
 
             thePeeps.forEach(person =>{
-                baseRef.doc(docRef.id).collection('participants').add({
+                baseRef.doc(docRef.id).collection('teamMembers').add({
                     "firstName": person["fName"],
                     "lastName": person["lName"],
-                    "email": person["email"]
+                    "email": person["email"],
+                    "mcUserName": person["mcUserName"],
                 }).then(personRef=>{
-                    baseRef.doc(docRef.id).collection('participants').doc(personRef.id).update({"uid": (personRef.id + "_SCH")}).then(()=>{
+                    baseRef.doc(docRef.id).collection('teamMembers').doc(personRef.id).update({"uid": (personRef.id + "_FRB_MC")}).then(()=>{
                         console.log("write complete");
-                        setThePeepIDs(preIDs => [...preIDs, {name: (`${person["fName"]} ${person["lName"]}`),id: (personRef.id + "_SCH")}]);
+                        setThePeepIDs(preIDs => [...preIDs, {name: (`${person["fName"]} ${person["lName"]}`),id: (personRef.id + "_FRB_MC")}]);
                     }).catch(e=>console.log(e));
                 }).catch(e=>console.log(e));
             });
@@ -92,25 +93,21 @@ function SchoolRegProcess() {
     let elem = (
         <div className="bigOneLol">
             <div className="login-box">
-                <div className="imgCont"><img src={fancy_logo_fat}/></div>
+                <div className="imgCont"><img src={MC_REG_LOGO}/></div>
                 <div className={"FormSpace " + formSpaceShow}>
                 <form className={"initialInfoDiv " + initialStyles} onSubmit={handleSubmit(onSubmit)}>
                     <div >
                         <div className="user-box">
-                            <input type="text" name="schoolName" ref={register({ required: true })} />
-                            <label>Name Of School</label>
-                        </div>
-                        <div className="user-box">
-                            <input type="number" name="parts" max="12" min="4" ref={register({ required: true })} />
-                            <label>No. Of Participants</label>
+                            <input type="text" name="teamName" ref={register({ required: true })} />
+                            <label>Team Name</label>
                         </div>
                         <div className="user-box">
                             <input type="email" name="email" ref={register({ required: true })} />
-                            <label>Club Email Address</label>
+                            <label>Team Email Address</label>
                         </div>
                         <div className="user-box">
-                            <input type="tel" name="ticContact" maxLength="10" minLength="10" ref={register({ required: true })} />
-                            <label>Contact of TIC</label>
+                            <input type="tel" name="contact" maxLength="10" minLength="10" ref={register({ required: true })} />
+                            <label>Team Contact Number</label>
                         </div>
                     </div>
                     <div><p className="warningPSTD">* Please Input valid email addresses since BTUI access codes will be 
@@ -121,8 +118,8 @@ function SchoolRegProcess() {
 
 
                 <form className={"participantInfoDiv " + participantStyles} onSubmit={individials.handleSubmit(participantOnSubmit)}>
+                    <h4 className="partText">Participant {(Number(progress)-1)} of {parts-1}</h4>
                     <div >
-                        <h4 className="partText">Participant {(Number(progress)-1)} of {parts-1}</h4>
                         <div className="user-box">
                             <input type="text" name="fName" ref={individials.register({ required: true })} />
                             <label>First Name</label>
@@ -135,6 +132,10 @@ function SchoolRegProcess() {
                             <input type="email" name="email" ref={individials.register({ required: true })} />
                             <label>Email Address</label>
                         </div>
+                        <div className="user-box">
+                            <input type="text" name="mcUserName" ref={individials.register({ required: true })} />
+                            <label>Minecraft Username</label>
+                        </div>
                     </div>
                     <div><p className="warningPSTD">* Please Input valid email addresses since BTUI access codes will be 
                         emailed to you, of without you will not be able to access the events of BTUI</p>
@@ -146,13 +147,13 @@ function SchoolRegProcess() {
                     <p>
                         Cool, The Registration process is almost complete. Is the following information accurate?
                     </p>
-                    <h4>Participants</h4>
+                    <h4>Team Members</h4>
                     <ul>{thePeeps.map(peep => <li>{peep["fName"] + " " + peep["lName"]}</li>)}</ul>
-                    <div className="ProgressDiv"><button onClick={yesButtonClick}>Y E S</button><button onClick={()=>window.location.href="/registration/school"}>N O</button></div>
+                    <div className="ProgressDiv"><button onClick={yesButtonClick}>Y E S</button><button onClick={()=>window.location.href="/registration/valorant"}>N O</button></div>
                 </div>
                 <div className={"CongratsSpace " + congratsSpaceShow}>
-                    <p>Congrats! You've successfully registered for BTUI 2020</p>
-                    <h5>Access Codes for each participant</h5>
+                    <p>Congrats! You've successfully registered for Minecraft</p>
+                    <h5>Access Codes for each team member</h5>
                     <ul>{peepIDs.map(peep=><li><p>{peep["name"]}</p><p className="uidStyleText">{peep["id"]}</p></li>)}</ul>
                     <p className="accesscodeWarning">* Keep these access codes with you at all times and do not share these with anyone, you'll be needing this to access certain parts of the BTUI website</p>
                     <hr />
@@ -166,4 +167,4 @@ function SchoolRegProcess() {
     return elem;
 }
 
-export default SchoolRegProcess;
+export default MinecraftRegProcess;

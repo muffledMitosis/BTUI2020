@@ -1,0 +1,435 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Goldman:wght@700&display=swap');
+.unified_btui_logo_FB {
+    /* position: absolute;
+    z-index: 10; */
+    width: 20vw;
+    /* padding: 2rem; */
+}
+
+.fb_main_head {
+    width: 50vw;
+    /* top: 23vw; */
+}
+
+.fb_main_div {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    z-index: 10;
+}
+
+.FRL_DT {
+    background-image: url('https://firebasestorage.googleapis.com/v0/b/btui-2020.appspot.com/o/assets%2Ffrostbyte%2Fregis%2FDT_REG.png?alt=media&token=2b9f7712-c0ad-4b6b-917f-2557db2aba0a');
+}
+
+.FRL_VL {
+    background-image: url("https://firebasestorage.googleapis.com/v0/b/btui-2020.appspot.com/o/assets%2Ffrostbyte%2FVAL.png?alt=media&token=720a77fe-b6c5-4be2-a5cd-48d25fe20168");
+}
+
+.FRL_MC {
+    background-image: url("https://firebasestorage.googleapis.com/v0/b/btui-2020.appspot.com/o/assets%2Ffrostbyte%2FMC.png?alt=media&token=e7370e3a-bf36-4aa3-bd85-d46e65bc9387");
+}
+
+.FRL_ITEM {
+    width: 100vw;
+    height: 100vh;
+    background-size: 120%;
+    background-position: center;
+}
+
+@media (max-width: 1200px) {
+    .FRL_ITEM {
+        background-size: 200%;
+    }
+}
+
+@media (max-width: 1000px) {
+    .FRL_ITEM {
+        background-size: 320%;
+    }
+    .fb_main_head {
+        width: 80vw;
+    }
+    .unified_btui_logo_FB {
+        width: 40vw;
+    }
+}
+
+.FRL_ITEM:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.801);
+}
+
+.FR_COUNTER {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(42, 40, 65);
+    padding-top: 2rem;
+    padding-bottom: 3rem;
+}
+
+@media (max-width: 900px) {
+    .FR_COUNTER {
+        height: 70vh;
+    }
+}
+
+.fr_timer {
+    font-family: 'Roboto', sans-serif;
+    color: #fa4454;
+    font-size: 4vw;
+    margin-top: 2rem;
+}
+
+.FR_COUNTER>img {
+    width: 60vw;
+    margin-top: 3rem;
+}
+
+.reg_div_fr {
+    display: flex;
+    background-color: rgb(51, 50, 63);
+    flex-direction: column;
+    align-items: center;
+}
+
+.gameRegValorant {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://firebasestorage.googleapis.com/v0/b/btui-2020.appspot.com/o/assets%2Ffrostbyte%2Fregis%2FVAL_REG.png?alt=media&token=713b7436-fa52-4150-9a4b-ab0995c0593c');
+}
+
+.gameRegDT {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://firebasestorage.googleapis.com/v0/b/btui-2020.appspot.com/o/assets%2Ffrostbyte%2Fregis%2FDT_REG.png?alt=media&token=2b9f7712-c0ad-4b6b-917f-2557db2aba0a');
+}
+
+.gameRegMC {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://firebasestorage.googleapis.com/v0/b/btui-2020.appspot.com/o/assets%2Ffrostbyte%2Fregis%2FMC_REG.png?alt=media&token=726b00ab-cb60-4b85-bc5d-8490dc5189e9');
+}
+
+.gameRegRL {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://firebasestorage.googleapis.com/v0/b/btui-2020.appspot.com/o/assets%2Ffrostbyte%2Fregis%2FRL_REG.jpg?alt=media&token=9a291780-6b46-45d1-bac5-a1a226fddc41');
+}
+
+.GameRegCard {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 6vw;
+    color: rgb(168, 168, 168);
+    width: 100vw;
+    height: 30vw;
+    /* border: solid white 4px; */
+    background-position: center;
+    background-size: 100%;
+    transition-property: background-size color;
+    transition-duration: 0.2s;
+    cursor: pointer;
+}
+
+.GameRegCard:hover {
+    background-size: 120%;
+    color: rgb(255, 255, 255);
+}
+
+.GameRegCard>h2 {
+    font-family: 'Goldman', cursive;
+    font-size: 8vw;
+}
+
+.FR_REGISTER_NOW_TXT {}
+
+.FR_REGISTER_NOW_TXT {
+    position: relative;
+    color: white;
+    font-size: 5vw;
+    letter-spacing: .5em;
+    /* Animation provies a slight random skew. Check bottom of doc
+    for more information on how to random skew. */
+    animation: glitch-skew 1s infinite linear alternate-reverse;
+}
+
+.FR_REGISTER_NOW_TXT::before {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    left: 2px;
+    text-shadow: -2px 0 #ff00c1;
+    /* Creates an initial clip for our glitch. This works in
+    a typical top,right,bottom,left fashion and creates a mask
+    to only show a certain part of the glitch at a time. */
+    clip: rect(44px, 450px, 56px, 0);
+    /* Runs our glitch-anim defined below to run in a 5s loop, infinitely,
+    with an alternating animation to keep things fresh. */
+    animation: glitch-anim 5s infinite linear alternate-reverse;
+}
+
+.FR_REGISTER_NOW_TXT::after {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    left: -2px;
+    text-shadow: -2px 0 #00fff9, 2px 2px #ff00c1;
+    animation: glitch-anim2 1s infinite linear alternate-reverse;
+}
+
+
+/* Creates an animation with 20 steaps. For each step, it calculates 
+  a percentage for the specific step. It then generates a random clip
+  box to be used for the random glitch effect. Also adds a very subtle
+  skew to change the 'thickness' of the glitch.*/
+
+@keyframes glitch-anim {
+    0% {
+        clip: rect(54px, 9999px, 52px, 0);
+        transform: skew(0.32deg);
+    }
+    5% {
+        clip: rect(93px, 9999px, 9px, 0);
+        transform: skew(0.47deg);
+    }
+    10% {
+        clip: rect(11px, 9999px, 34px, 0);
+        transform: skew(0.22deg);
+    }
+    15% {
+        clip: rect(95px, 9999px, 50px, 0);
+        transform: skew(0.59deg);
+    }
+    20% {
+        clip: rect(38px, 9999px, 46px, 0);
+        transform: skew(0.76deg);
+    }
+    25% {
+        clip: rect(14px, 9999px, 10px, 0);
+        transform: skew(0.5deg);
+    }
+    30% {
+        clip: rect(74px, 9999px, 27px, 0);
+        transform: skew(0.07deg);
+    }
+    35% {
+        clip: rect(66px, 9999px, 3px, 0);
+        transform: skew(0.1deg);
+    }
+    40% {
+        clip: rect(33px, 9999px, 80px, 0);
+        transform: skew(0.29deg);
+    }
+    45% {
+        clip: rect(25px, 9999px, 86px, 0);
+        transform: skew(0.89deg);
+    }
+    50% {
+        clip: rect(89px, 9999px, 64px, 0);
+        transform: skew(0.38deg);
+    }
+    55% {
+        clip: rect(21px, 9999px, 84px, 0);
+        transform: skew(0.92deg);
+    }
+    60% {
+        clip: rect(85px, 9999px, 2px, 0);
+        transform: skew(0.32deg);
+    }
+    65% {
+        clip: rect(97px, 9999px, 34px, 0);
+        transform: skew(0.32deg);
+    }
+    70% {
+        clip: rect(73px, 9999px, 67px, 0);
+        transform: skew(0.82deg);
+    }
+    75% {
+        clip: rect(64px, 9999px, 27px, 0);
+        transform: skew(0.1deg);
+    }
+    80% {
+        clip: rect(65px, 9999px, 60px, 0);
+        transform: skew(0.43deg);
+    }
+    85% {
+        clip: rect(79px, 9999px, 94px, 0);
+        transform: skew(0.62deg);
+    }
+    90% {
+        clip: rect(48px, 9999px, 5px, 0);
+        transform: skew(0.94deg);
+    }
+    95% {
+        clip: rect(49px, 9999px, 59px, 0);
+        transform: skew(0.7deg);
+    }
+    100% {
+        clip: rect(76px, 9999px, 86px, 0);
+        transform: skew(0.27deg);
+    }
+}
+
+@keyframes glitch-anim2 {
+    0% {
+        clip: rect(33px, 9999px, 52px, 0);
+        transform: skew(0.48deg);
+    }
+    5% {
+        clip: rect(60px, 9999px, 92px, 0);
+        transform: skew(0.12deg);
+    }
+    10% {
+        clip: rect(60px, 9999px, 93px, 0);
+        transform: skew(0.27deg);
+    }
+    15% {
+        clip: rect(26px, 9999px, 51px, 0);
+        transform: skew(0.41deg);
+    }
+    20% {
+        clip: rect(48px, 9999px, 30px, 0);
+        transform: skew(0.46deg);
+    }
+    25% {
+        clip: rect(32px, 9999px, 4px, 0);
+        transform: skew(0.64deg);
+    }
+    30% {
+        clip: rect(44px, 9999px, 66px, 0);
+        transform: skew(0.89deg);
+    }
+    35% {
+        clip: rect(38px, 9999px, 70px, 0);
+        transform: skew(0.37deg);
+    }
+    40% {
+        clip: rect(75px, 9999px, 48px, 0);
+        transform: skew(0.97deg);
+    }
+    45% {
+        clip: rect(70px, 9999px, 38px, 0);
+        transform: skew(0.4deg);
+    }
+    50% {
+        clip: rect(77px, 9999px, 26px, 0);
+        transform: skew(0.17deg);
+    }
+    55% {
+        clip: rect(81px, 9999px, 22px, 0);
+        transform: skew(0.62deg);
+    }
+    60% {
+        clip: rect(6px, 9999px, 39px, 0);
+        transform: skew(0.3deg);
+    }
+    65% {
+        clip: rect(19px, 9999px, 89px, 0);
+        transform: skew(0.69deg);
+    }
+    70% {
+        clip: rect(100px, 9999px, 3px, 0);
+        transform: skew(0.22deg);
+    }
+    75% {
+        clip: rect(11px, 9999px, 56px, 0);
+        transform: skew(0.86deg);
+    }
+    80% {
+        clip: rect(15px, 9999px, 32px, 0);
+        transform: skew(0.92deg);
+    }
+    85% {
+        clip: rect(34px, 9999px, 72px, 0);
+        transform: skew(0.99deg);
+    }
+    90% {
+        clip: rect(23px, 9999px, 40px, 0);
+        transform: skew(0.94deg);
+    }
+    95% {
+        clip: rect(99px, 9999px, 9px, 0);
+        transform: skew(0.6deg);
+    }
+    100% {
+        clip: rect(58px, 9999px, 19px, 0);
+        transform: skew(0.88deg);
+    }
+}
+
+@keyframes glitch-skew {
+    0% {
+        transform: skew(-3deg);
+    }
+    10% {
+        transform: skew(-4deg);
+    }
+    20% {
+        transform: skew(2deg);
+    }
+    30% {
+        transform: skew(-4deg);
+    }
+    40% {
+        transform: skew(5deg);
+    }
+    50% {
+        transform: skew(3deg);
+    }
+    60% {
+        transform: skew(-3deg);
+    }
+    70% {
+        transform: skew(-2deg);
+    }
+    80% {
+        transform: skew(5deg);
+    }
+    90% {
+        transform: skew(4deg);
+    }
+    100% {
+        transform: skew(-1deg);
+    }
+}
+
+body {
+    background-color: rgb(51, 50, 63);
+}
+
+.frostbyteRulesDiv {
+    background-color: rgb(51, 50, 63);
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+}
+
+.frostbyteRulesDiv>h2 {
+    color: violet;
+    text-align: center;
+    padding: 3rem;
+}
+
+.frostbyteRulesDiv>h3 {
+    padding-left: 3rem;
+}
+
+.frostbyteRulesDiv>ol {
+    padding-left: 4rem;
+    padding-top: 1rem;
+    font-weight: 100;
+}

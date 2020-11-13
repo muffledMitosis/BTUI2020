@@ -12,6 +12,13 @@ import RegistrationIntro from "./views/registrationIntro";
 import Programwiz from "./views/programwiz";
 import Dashbash from "./views/dashBash";
 import Timeline from './widgets/Timeline';
+import Frostbyte from "./views/frostbyte";
+
+import 'bootstrap/dist/css/bootstrap.min.css';
+import ValorantRegProcess from "./views/valorantRegProcess";
+import MinecraftRegProcess from "./views/minecraftRegProcess";
+import DotaRegProcess from "./views/dotaRegProcess";
+import RocketLeagueRegProcess from "./views/rocketLeagueRegProcess";
 
 function App() {
   return (
@@ -23,7 +30,7 @@ function App() {
               <img alt="" className="left_logo" src={consts.left_log} />
               <img alt="" className="left_logo_mobile" src={consts.crest_and_logo_mobile} />
               <div className="countDown">
-                <Countdown />
+                <Countdown time="Nov 15, 2020 09:30:00" />
               </div>
               <img alt="" className="main_btui_text" src={consts.main_btui_text} />
               <img alt="" className="main_btui_text_mobile" src={consts.main_logo_mobile} />
@@ -47,7 +54,7 @@ function App() {
             {/* <div className="cdSection"> */}
             <div className="mainCount">
               <img alt="" className="pLogo" src={consts.btuiPLogo} />
-              <Countdown looks="bigCountdown" />
+              <Countdown looks="bigCountdown" time="Nov 15, 2020 09:30:00" />
             </div>
             {/* <img alt="" className="bgTextureTwo" src={consts.background_texture}/>
             </div> */}
@@ -68,6 +75,18 @@ function App() {
         <Route exact path="/registration/individual">
           <GuestRegProcess />
         </Route>
+        <Route exact path="/registration/valorant">
+          <ValorantRegProcess />
+        </Route>
+        <Route exact path="/registration/minecraft">
+          <MinecraftRegProcess />
+        </Route>
+        <Route exact path="/registration/dota">
+            <DotaRegProcess />
+        </Route>
+        <Route exact path="/registration/rocketleague">
+            <RocketLeagueRegProcess />
+        </Route>
 
         <Route exact path="/programwiz">
           <Programwiz />
@@ -75,6 +94,7 @@ function App() {
         <Route exact path="/dashbash">
           <Dashbash />
         </Route>
+        <Route exact path="/frostbyte"><Frostbyte /></Route>
       </Switch>
     </Router>
   );
