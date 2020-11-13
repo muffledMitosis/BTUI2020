@@ -76,9 +76,9 @@ function ValorantRegProcess() {
                     "riotID": person["riotID"],
                     "nic": person["nic"]
                 }).then(personRef=>{
-                    baseRef.doc(docRef.id).collection('teamMembers').doc(personRef.id).update({"uid": (personRef.id + "_FRB")}).then(()=>{
+                    baseRef.doc(docRef.id).collection('teamMembers').doc(personRef.id).update({"uid": (personRef.id + "_FRB_VA")}).then(()=>{
                         console.log("write complete");
-                        setThePeepIDs(preIDs => [...preIDs, {name: (`${person["fName"]} ${person["lName"]}`),id: (personRef.id + "_FRB")}]);
+                        setThePeepIDs(preIDs => [...preIDs, {name: (`${person["fName"]} ${person["lName"]}`),id: (personRef.id + "_FRB_VA")}]);
                     }).catch(e=>console.log(e));
                 }).catch(e=>console.log(e));
             });

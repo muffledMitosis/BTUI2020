@@ -75,9 +75,9 @@ function MinecraftRegProcess() {
                     "email": person["email"],
                     "mcUserName": person["mcUserName"],
                 }).then(personRef=>{
-                    baseRef.doc(docRef.id).collection('teamMembers').doc(personRef.id).update({"uid": (personRef.id + "_FRB")}).then(()=>{
+                    baseRef.doc(docRef.id).collection('teamMembers').doc(personRef.id).update({"uid": (personRef.id + "_FRB_MC")}).then(()=>{
                         console.log("write complete");
-                        setThePeepIDs(preIDs => [...preIDs, {name: (`${person["fName"]} ${person["lName"]}`),id: (personRef.id + "_FRB")}]);
+                        setThePeepIDs(preIDs => [...preIDs, {name: (`${person["fName"]} ${person["lName"]}`),id: (personRef.id + "_FRB_MC")}]);
                     }).catch(e=>console.log(e));
                 }).catch(e=>console.log(e));
             });
