@@ -1,0 +1,44 @@
+.mainLiveDiv {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.liveCounter {
+    color: #EEE5E9;
+}
+
+.mainLiveDiv h1 {
+    color: #EEE5E9;
+    padding: 2rem;
+}
+
+.mainLiveDiv p {
+    margin: 1rem;
+}
+
+.mainLiveDiv h3 {
+    color: #D64933;
+}
+
+.mainLiveDiv img {
+    position: absolute;
+    bottom: 2rem;
+}
+
+.videoPlayer {
+    /* background-color: white; */
+    border-radius: 20px;
+}
+
+@keyframes streamGradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
