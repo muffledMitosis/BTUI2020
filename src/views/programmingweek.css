@@ -4,6 +4,22 @@
   }
 }
 
+.rules {
+  margin: 2px;
+}
+
+.rules li {
+  margin-bottom: 5px;
+}
+
+.code-code {
+  background-color: #232323;
+  padding: 4px;
+  padding-left: 6px; 
+  padding-right: 6px;
+  border-radius: 4px;
+}
+
 .text-aqua {
   color: aqua!important;
 }
