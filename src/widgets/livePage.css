@@ -22,8 +22,9 @@
 }
 
 .mainLiveDiv img {
-    position: absolute;
-    bottom: 2rem;
+    /* position: absolute; */
+    margin-top: 4rem;
+    margin-bottom: 1rem;
 }
 
 .videoPlayer {

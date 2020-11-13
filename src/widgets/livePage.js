@@ -22,6 +22,8 @@ function LiveView(props) {
     const [videoID, setVideoID] = useState("");
 
     const playerOptions = {
+        width: (window.innerWidth<700) ? String(window.innerWidth - 100) : '640',
+        height: '390',
         playerVars: {
             controls: 0,
             modestbranding: 1,
