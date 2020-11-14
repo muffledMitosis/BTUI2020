@@ -231,7 +231,7 @@ h5 {
     text-align: center;
 }
 
-hr {
+.custom-hr {
     border-color: #03e9f4;
     margin: 3rem 2rem;
 }
