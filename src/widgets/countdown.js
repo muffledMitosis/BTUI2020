@@ -43,9 +43,7 @@ class Countdown extends React.Component {
     }
 
     render() {
-        return ( <
-            div className = { this.props.looks } > { this.state.timeStr } <
-            /div>
+        return ( <div className = { this.props.looks } > { this.state.timeStr } </div>
         );
     }
 };
