@@ -3,6 +3,8 @@ import React from "react";
 import Carousel from 'react-bootstrap/Carousel';
 import * as consts from '../utils/consts.js';
 
+import {analytics} from '../utils/firebase';
+
 import Countdown from '../widgets/countdown';
 import FRB_TIMELINE from '../widgets/frbTimeLine';
 
@@ -24,6 +26,7 @@ const rulesInEvent = [
 ];
 
 function Frostbyte() {
+    analytics.logEvent("frb_page_visit")
     let elem = (
         <div>
             <div className="fb_main_div">

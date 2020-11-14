@@ -19,6 +19,7 @@ import ValorantRegProcess from "./views/valorantRegProcess";
 import MinecraftRegProcess from "./views/minecraftRegProcess";
 import DotaRegProcess from "./views/dotaRegProcess";
 import RocketLeagueRegProcess from "./views/rocketLeagueRegProcess";
+import LiveView from "./widgets/livePage";
 
 function App() {
   return (
@@ -95,6 +96,10 @@ function App() {
           <Dashbash />
         </Route>
         <Route exact path="/frostbyte"><Frostbyte /></Route>
+
+        <Route exact path="/live">
+          <LiveView liveLocation="mainLive" />
+        </Route>
       </Switch>
     </Router>
   );
