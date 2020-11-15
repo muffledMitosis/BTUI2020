@@ -30,7 +30,7 @@ function Armitage() {
             </div>
             <div className="compContent">
                 <h1>Welcome To Day 2 of BTUI</h1>
-                <h2>"Fancy Saying for the topic lol"</h2>
+                <h2>"Confined Freedom"</h2>
                 <div className="timerrrrrARM">
                     <h4>You Have</h4>
                     <Countdown looks="armitageTime" time="Nov 16, 2020 16:30:00" />
