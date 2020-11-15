@@ -38,7 +38,7 @@ function Armitage() {
                     <h5>Use it wisely</h5>
                 </div>
                 <div className="armInstructions">
-                    <h3>Hello {JSON.parse(window.localStorage.getItem('currentUser'))["firstName"]}, Upload your submissions to the Armitage Uploads channel on Discord</h3>
+                    <h3>Hello {JSON.parse(window.localStorage.getItem('currentUser'))["firstName"]}, Upload your submission to the Armitage Uploads channel on Discord</h3>
                     <button onClick={()=>{window.location.href="https://discord.gg/J89VmEMGJY"}}>UPLOAD</button>
                 </div>
             </div>
