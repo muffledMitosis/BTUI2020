@@ -33,7 +33,7 @@ function Armitage() {
                 <h2>"Fancy Saying for the topic lol"</h2>
                 <div className="timerrrrrARM">
                     <h4>You Have</h4>
-                    <Countdown looks="armitageTime" time="Nov 16, 2020 12:00:00" />
+                    <Countdown looks="armitageTime" time="Nov 16, 2020 16:30:00" />
                     <h4>More</h4>
                     <h5>Use it wisely</h5>
                 </div>
