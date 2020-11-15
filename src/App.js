@@ -20,6 +20,7 @@ import MinecraftRegProcess from "./views/minecraftRegProcess";
 import DotaRegProcess from "./views/dotaRegProcess";
 import RocketLeagueRegProcess from "./views/rocketLeagueRegProcess";
 import LiveView from "./widgets/livePage";
+import Armitage from "./views/armitage";
 
 function App() {
   return (
@@ -99,6 +100,9 @@ function App() {
 
         <Route exact path="/live">
           <LiveView liveLocation="mainLive" />
+        </Route>
+        <Route exact path="/armitage">
+          <Armitage />
         </Route>
       </Switch>
     </Router>
