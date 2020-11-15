@@ -10,6 +10,12 @@ function Armitage() {
     // document.getElementsByTagName("HTML")[0].style["overflow"] = "hidden";
     document.getElementsByTagName("HTML")[0].style["height"] = "100%";
 
+    if(!window.localStorage.getItem('currentUser')) {
+        window.localStorage.setItem('wantedFor', '/armitage');
+        window.location.href = "/auth";
+    }else {
+        console.log(JSON.parse(window.localStorage.getItem('currentUser')));
+    }
 
     let elem = (
         <div>
@@ -32,7 +38,7 @@ function Armitage() {
                     <h5>Use it wisely</h5>
                 </div>
                 <div className="armInstructions">
-                    <h3>Upload your submissions to the Armitage Uploads channel</h3>
+                    <h3>Hello {JSON.parse(window.localStorage.getItem('currentUser'))["firstName"]}, Upload your submissions to the Armitage Uploads channel on Discord</h3>
                     <button onClick={()=>{window.location.href="https://discord.gg/J89VmEMGJY"}}>UPLOAD</button>
                 </div>
             </div>
