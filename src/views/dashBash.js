@@ -10,14 +10,16 @@ function Dashbash() {
     <div className="container-md">
       <div className="jumbotron shadow bg-dark text-aqua pb-4 mb-4">
         <h1 className="display-2 mb-4">Dash-Bash</h1>
-        <p className="lead"><strong>Dash-Bash</strong> is a challenge on creating the best Flutter app. This is the time to test your Flutter skills and what you learnt from today. Get ready folks! Lets Flutter...</p>
+        <p className="lead"><strong>Dash-Bash</strong> is a challenge on creating the best Flutter app. This is the time to test and sharp your Flutter skills. Don't know where to start? 
+        Go to official <a href="https://flutter.dev/docs/get-started/install"> Flutter Docs </a> to get started. 
+        Also check out <a href="."> "Get onboard with app development with Flutter"</a>, a talk session held at BTUI'20. Get ready folks! Lets Flutter...</p>
         <hr className="bg-light my-4" size="1" />
         <h5 className="text-light">Challenge Rules & Instructions,</h5>
-        <ol className="text-monospace">
-          <li># Rule 1</li>
-          <li># Rule 2</li>
-          <li># Rule 3</li>
-          <li># Rule 4</li>
+        <ol className="text-monospace rules">
+          <li>Submission made by a registered user will only be considered as a valid submission.</li>
+          <li>Submit only the <code className="code-code">main.dart</code> file of your Flutter project. Make sure you include all your code within it.</li>
+          <li>The app can only consist a maximum of 3 pages. Refrain using other packages. Use only widgets provided by Flutter.</li>
+          <li>The best app will be selected from the design, concept, architecture and responsivity.</li>
         </ol>
         <p>Click the below button to submit your main.dart file.</p>
         <div className="input-group">

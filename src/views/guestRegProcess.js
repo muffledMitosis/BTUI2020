@@ -73,7 +73,7 @@ function GuestRegProcess() {
                     <p>Congrats! You've successfully registered for BTUI 2020. Here's your access-code.</p>
                     <p className="uidStyleText singleThingLOLOLO">{access_code}</p>
                     <p className="accesscodeWarning">* Keep this access code with you at all times and DO NOT share it with anyone, you'll be needing this to access certain parts of the BTUI website</p>
-                    <hr />
+                    <hr className="custom-hr"/>
                     <p>Join the BTUI Discord Server, where we'll be posting regular updates of Talk sessions, competitoins and other related events</p>
                     <div className="sRegDiscrodServerJoinButtonDiv"><button className="sRegDiscrodServerJoinButton" onClick={()=>{window.location.href="https://discord.gg/d8ZZdhHEDk"}}>J O I N</button></div>
                 </div>
