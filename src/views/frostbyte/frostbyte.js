@@ -1,12 +1,12 @@
 import './frostbyte.css';
 import React from "react";
 import Carousel from 'react-bootstrap/Carousel';
-import * as consts from '../utils/consts.js';
+import * as consts from '../../utils/consts.js';
 
-import {analytics} from '../utils/firebase';
+import {analytics} from '../../utils/firebase';
 
-import Countdown from '../widgets/countdown';
-import FRB_TIMELINE from '../widgets/frbTimeLine';
+import Countdown from '../../widgets/countdown/countdown';
+import FRB_TIMELINE from '../../widgets/frbTimeLine/frbTimeLine';
 
 const rulePrerequisites = [
     "All players must register with their full name and username, but the username will be used in the esport events to refer to the player.",

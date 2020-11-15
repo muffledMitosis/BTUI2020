@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import './timeline.css';
+import '../timeline.css';
 
 function Timeline() {
     let elem = (

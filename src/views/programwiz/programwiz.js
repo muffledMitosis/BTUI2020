@@ -2,7 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 
-import "./programmingweek.css";
+import "../programmingweek.css";
 
 function Programwiz() {
   //document.getElementsByTagName("BODY")[0].style["background"] = "linear-gradient(#141e30, #243b55)";

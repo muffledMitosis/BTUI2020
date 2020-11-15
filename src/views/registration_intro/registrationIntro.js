@@ -1,8 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import {fancy_logo_fat} from '../utils/consts';
-import { analytics } from '../utils/firebase';
+import {fancy_logo_fat} from '../../utils/consts';
+import { analytics } from '../../utils/firebase';
 
 import './registration.css'
 
