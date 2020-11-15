@@ -1,9 +1,9 @@
 import React from 'react';
 import YouTube from 'react-youtube';
 import {useState} from 'react';
-import {db, analytics} from '../utils/firebase';
-import Countdown from "./countdown";
-import {U_BTUI_LOGO} from '../utils/consts';
+import {db, analytics} from '../../utils/firebase';
+import Countdown from "../countdown/countdown";
+import {U_BTUI_LOGO} from '../../utils/consts';
 
 import './livePage.css';
 

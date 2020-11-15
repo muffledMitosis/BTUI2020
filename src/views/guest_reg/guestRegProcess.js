@@ -3,9 +3,9 @@ import ReactDOM from 'react-dom';
 import {useState} from 'react';
 
 import { useForm } from "react-hook-form";
-import {db} from '../utils/firebase';
+import {db} from '../../utils/firebase';
 
-import {fancy_logo_fat} from '../utils/consts';
+import {fancy_logo_fat} from '../../utils/consts';
 
 function GuestRegProcess() {
 

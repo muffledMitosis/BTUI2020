@@ -1,9 +1,9 @@
 import React from 'react';
 import './armitage.css';
 
-import Countdown from '../widgets/countdown';
+import Countdown from '../../widgets/countdown/countdown';
 
-import {U_BTUI_LOGO} from '../utils/consts';
+import {U_BTUI_LOGO} from '../../utils/consts';
 
 function Armitage() {
     document.getElementsByTagName("BODY")[0].style["background"] = "radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%)";

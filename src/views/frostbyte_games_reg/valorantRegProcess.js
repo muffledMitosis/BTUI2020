@@ -1,4 +1,4 @@
-import './sReg.css';
+import '../sReg.css';
 
 import React from 'react';
 import ReactDOM from 'react-dom';
@@ -6,17 +6,17 @@ import {useState, useEffect} from 'react';
 
 import { useForm } from "react-hook-form";
 
-import {MC_REG_LOGO} from '../utils/consts';
+import {VAL_REG_LOGO} from '../../utils/consts';
 
-import {db} from '../utils/firebase';
+import {db} from '../../utils/firebase';
 
-function MinecraftRegProcess() {
+function ValorantRegProcess() {
     // const [parts, setParts] = useState(4);
 
     document.getElementsByTagName("BODY")[0].style["background"] = "linear-gradient(#141e30, #243b55)";
 
     const [progress, setProgress] = useState(1);
-    const [parts, setParts] = useState(5);
+    const [parts, setParts] = useState(6);
 
     const [thePeeps, setThePeeps] = useState([]);
     const [peepIDs, setThePeepIDs] = useState([]);
@@ -60,7 +60,7 @@ function MinecraftRegProcess() {
         // TODO: Show Loading icon instead of button
         console.log(schoolInfo);
         console.log(thePeeps);
-        let baseRef = db.collection('users').doc('frostbyte').collection('games').doc('minecraft').collection('teamsRegistered');
+        let baseRef = db.collection('users').doc('frostbyte').collection('games').doc('valorant').collection('teamsRegistered');
         baseRef.add({
             "teamName": schoolInfo["teamName"],
             "teamContact": schoolInfo["contact"],
@@ -73,11 +73,12 @@ function MinecraftRegProcess() {
                     "firstName": person["fName"],
                     "lastName": person["lName"],
                     "email": person["email"],
-                    "mcUserName": person["mcUserName"],
+                    "riotID": person["riotID"],
+                    "nic": person["nic"]
                 }).then(personRef=>{
-                    baseRef.doc(docRef.id).collection('teamMembers').doc(personRef.id).update({"uid": (personRef.id + "_FRB_MC")}).then(()=>{
+                    baseRef.doc(docRef.id).collection('teamMembers').doc(personRef.id).update({"uid": (personRef.id + "_FRB_VA")}).then(()=>{
                         console.log("write complete");
-                        setThePeepIDs(preIDs => [...preIDs, {name: (`${person["fName"]} ${person["lName"]}`),id: (personRef.id + "_FRB_MC")}]);
+                        setThePeepIDs(preIDs => [...preIDs, {name: (`${person["fName"]} ${person["lName"]}`),id: (personRef.id + "_FRB_VA")}]);
                     }).catch(e=>console.log(e));
                 }).catch(e=>console.log(e));
             });
@@ -93,7 +94,7 @@ function MinecraftRegProcess() {
     let elem = (
         <div className="bigOneLol">
             <div className="login-box">
-                <div className="imgCont"><img src={MC_REG_LOGO}/></div>
+                <div className="imgCont"><img src={VAL_REG_LOGO}/></div>
                 <div className={"FormSpace " + formSpaceShow}>
                 <form className={"initialInfoDiv " + initialStyles} onSubmit={handleSubmit(onSubmit)}>
                     <div >
@@ -133,8 +134,12 @@ function MinecraftRegProcess() {
                             <label>Email Address</label>
                         </div>
                         <div className="user-box">
-                            <input type="text" name="mcUserName" ref={individials.register({ required: true })} />
-                            <label>Minecraft Username</label>
+                            <input type="text" name="riotID" ref={individials.register({ required: true })} />
+                            <label>Riot ID</label>
+                        </div>
+                        <div className="user-box">
+                            <input type="text" name="nic" ref={individials.register()} />
+                            <label>NIC Number</label>
                         </div>
                     </div>
                     <div><p className="warningPSTD">* Please Input valid email addresses since BTUI access codes will be 
@@ -152,7 +157,7 @@ function MinecraftRegProcess() {
                     <div className="ProgressDiv"><button onClick={yesButtonClick}>Y E S</button><button onClick={()=>window.location.href="/registration/valorant"}>N O</button></div>
                 </div>
                 <div className={"CongratsSpace " + congratsSpaceShow}>
-                    <p>Congrats! You've successfully registered for Minecraft</p>
+                    <p>Congrats! You've successfully registered for Valorant</p>
                     <h5>Access Codes for each team member</h5>
                     <ul>{peepIDs.map(peep=><li><p>{peep["name"]}</p><p className="uidStyleText">{peep["id"]}</p></li>)}</ul>
                     <p className="accesscodeWarning">* Keep these access codes with you at all times and do not share these with anyone, you'll be needing this to access certain parts of the BTUI website</p>
@@ -167,4 +172,4 @@ function MinecraftRegProcess() {
     return elem;
 }
 
-export default MinecraftRegProcess;
+export default ValorantRegProcess;

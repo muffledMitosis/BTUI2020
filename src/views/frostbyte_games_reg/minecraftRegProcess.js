@@ -1,4 +1,4 @@
-import './sReg.css';
+import '../sReg.css';
 
 import React from 'react';
 import ReactDOM from 'react-dom';
@@ -6,17 +6,17 @@ import {useState, useEffect} from 'react';
 
 import { useForm } from "react-hook-form";
 
-import {DT_REG_LOG} from '../utils/consts';
+import {MC_REG_LOGO} from '../../utils/consts';
 
-import {db} from '../utils/firebase';
+import {db} from '../../utils/firebase';
 
-function DotaRegProcess() {
+function MinecraftRegProcess() {
     // const [parts, setParts] = useState(4);
 
     document.getElementsByTagName("BODY")[0].style["background"] = "linear-gradient(#141e30, #243b55)";
 
     const [progress, setProgress] = useState(1);
-    const [parts, setParts] = useState(6);
+    const [parts, setParts] = useState(5);
 
     const [thePeeps, setThePeeps] = useState([]);
     const [peepIDs, setThePeepIDs] = useState([]);
@@ -60,7 +60,7 @@ function DotaRegProcess() {
         // TODO: Show Loading icon instead of button
         console.log(schoolInfo);
         console.log(thePeeps);
-        let baseRef = db.collection('users').doc('frostbyte').collection('games').doc('dota').collection('teamsRegistered');
+        let baseRef = db.collection('users').doc('frostbyte').collection('games').doc('minecraft').collection('teamsRegistered');
         baseRef.add({
             "teamName": schoolInfo["teamName"],
             "teamContact": schoolInfo["contact"],
@@ -73,12 +73,11 @@ function DotaRegProcess() {
                     "firstName": person["fName"],
                     "lastName": person["lName"],
                     "email": person["email"],
-                    "mcUserName": person["dtUserName"],
-                    "nic": person["nic"]
+                    "mcUserName": person["mcUserName"],
                 }).then(personRef=>{
-                    baseRef.doc(docRef.id).collection('teamMembers').doc(personRef.id).update({"uid": (personRef.id + "_FRB_DT")}).then(()=>{
+                    baseRef.doc(docRef.id).collection('teamMembers').doc(personRef.id).update({"uid": (personRef.id + "_FRB_MC")}).then(()=>{
                         console.log("write complete");
-                        setThePeepIDs(preIDs => [...preIDs, {name: (`${person["fName"]} ${person["lName"]}`),id: (personRef.id + "_FRB_DT")}]);
+                        setThePeepIDs(preIDs => [...preIDs, {name: (`${person["fName"]} ${person["lName"]}`),id: (personRef.id + "_FRB_MC")}]);
                     }).catch(e=>console.log(e));
                 }).catch(e=>console.log(e));
             });
@@ -94,7 +93,7 @@ function DotaRegProcess() {
     let elem = (
         <div className="bigOneLol">
             <div className="login-box">
-                <div className="imgCont"><img src={DT_REG_LOG}/></div>
+                <div className="imgCont"><img src={MC_REG_LOGO}/></div>
                 <div className={"FormSpace " + formSpaceShow}>
                 <form className={"initialInfoDiv " + initialStyles} onSubmit={handleSubmit(onSubmit)}>
                     <div >
@@ -119,8 +118,8 @@ function DotaRegProcess() {
 
 
                 <form className={"participantInfoDiv " + participantStyles} onSubmit={individials.handleSubmit(participantOnSubmit)}>
+                    <h4 className="partText">Participant {(Number(progress)-1)} of {parts-1}</h4>
                     <div >
-                        <h4 className="partText">Participant {(Number(progress)-1)} of {parts-1}</h4>
                         <div className="user-box">
                             <input type="text" name="fName" ref={individials.register({ required: true })} />
                             <label>First Name</label>
@@ -134,12 +133,8 @@ function DotaRegProcess() {
                             <label>Email Address</label>
                         </div>
                         <div className="user-box">
-                            <input type="text" name="dtUserName" ref={individials.register({ required: true })} />
-                            <label>In Game Username</label>
-                        </div>
-                        <div className="user-box">
-                            <input type="text" name="nic" ref={individials.register()} />
-                            <label>NIC Number</label>
+                            <input type="text" name="mcUserName" ref={individials.register({ required: true })} />
+                            <label>Minecraft Username</label>
                         </div>
                     </div>
                     <div><p className="warningPSTD">* Please Input valid email addresses since BTUI access codes will be 
@@ -172,4 +167,4 @@ function DotaRegProcess() {
     return elem;
 }
 
-export default DotaRegProcess;
+export default MinecraftRegProcess;

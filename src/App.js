@@ -1,26 +1,27 @@
 import "./App.css";
 import React from "react";
 import * as consts from "./utils/consts.js";
-import Countdown from "./widgets/countdown";
-import SchoolRegProcess from "./views/schoolRegProcess";
-import GuestRegProcess from "./views/guestRegProcess";
+import Countdown from "./widgets/countdown/countdown";
+import SchoolRegProcess from "./views/school_reg/schoolRegProcess";
+import GuestRegProcess from "./views/guest_reg/guestRegProcess";
 
 import { analytics } from "./utils/firebase";
 
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
-import RegistrationIntro from "./views/registrationIntro";
-import Programwiz from "./views/programwiz";
-import Dashbash from "./views/dashBash";
-import Timeline from './widgets/Timeline';
-import Frostbyte from "./views/frostbyte";
+import RegistrationIntro from "./views/registration_intro/registrationIntro";
+import Programwiz from "./views/programwiz/programwiz";
+import Dashbash from "./views/dashbash/dashBash";
+import Timeline from './widgets//mainTimeline/Timeline';
+import Frostbyte from "./views/frostbyte/frostbyte";
 
 import 'bootstrap/dist/css/bootstrap.min.css';
-import ValorantRegProcess from "./views/valorantRegProcess";
-import MinecraftRegProcess from "./views/minecraftRegProcess";
-import DotaRegProcess from "./views/dotaRegProcess";
-import RocketLeagueRegProcess from "./views/rocketLeagueRegProcess";
-import LiveView from "./widgets/livePage";
-import Armitage from "./views/armitage";
+import ValorantRegProcess from "./views/frostbyte_games_reg/valorantRegProcess";
+import MinecraftRegProcess from "./views/frostbyte_games_reg/minecraftRegProcess";
+import DotaRegProcess from "./views/frostbyte_games_reg/dotaRegProcess";
+import RocketLeagueRegProcess from "./views/frostbyte_games_reg/rocketLeagueRegProcess";
+import LiveView from "./widgets/livePage/livePage";
+import Armitage from "./views/armitage/armitage";
+import AuthCodeGetter from "./views/auth_code_getter/authCodeGetter";
 
 function App() {
   return (
@@ -32,7 +33,7 @@ function App() {
               <img alt="" className="left_logo" src={consts.left_log} />
               <img alt="" className="left_logo_mobile" src={consts.crest_and_logo_mobile} />
               <div className="countDown">
-                <Countdown time="Nov 15, 2020 09:30:00" />
+                <Countdown time="Nov 15, 2020 10:00:00" />
               </div>
               <img alt="" className="main_btui_text" src={consts.main_btui_text} />
               <img alt="" className="main_btui_text_mobile" src={consts.main_logo_mobile} />
@@ -56,7 +57,7 @@ function App() {
             {/* <div className="cdSection"> */}
             <div className="mainCount">
               <img alt="" className="pLogo" src={consts.btuiPLogo} />
-              <Countdown looks="bigCountdown" time="Nov 15, 2020 09:30:00" />
+              <Countdown looks="bigCountdown" time="Nov 15, 2020 10:00:00" />
             </div>
             {/* <img alt="" className="bgTextureTwo" src={consts.background_texture}/>
             </div> */}
@@ -103,6 +104,9 @@ function App() {
         </Route>
         <Route exact path="/armitage">
           <Armitage />
+        </Route>
+        <Route exact path="/auth">
+          <AuthCodeGetter />
         </Route>
       </Switch>
     </Router>
