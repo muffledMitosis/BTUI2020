@@ -4,8 +4,13 @@ import "bootstrap/dist/css/bootstrap.min.css";
 
 import "../programmingweek.css";
 
+import {analytics} from '../../utils/firebase';
+
 function Programwiz() {
   document.getElementsByTagName("BODY")[0].style["background"] = "#323232";
+
+  analytics.logEvent("wiz_page_visit");
+
   let elem = (
     <div className="container-md">
       <div className="jumbotron shadow bg-dark text-warning pb-4 mb-4">
