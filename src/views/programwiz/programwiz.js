@@ -5,7 +5,6 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "../programmingweek.css";
 
 function Programwiz() {
-  //document.getElementsByTagName("BODY")[0].style["background"] = "linear-gradient(#141e30, #243b55)";
   document.getElementsByTagName("BODY")[0].style["background"] = "#323232";
   let elem = (
     <div className="container-md">
@@ -13,7 +12,7 @@ function Programwiz() {
         <h1 className="display-2 mb-4">Programwiz</h1>
         <p className="lead"><strong>Programwiz</strong> is a competitive programming competition. This is the time to test and sharp your programming skills. Don't know where to start? 
         Go to <a href="https://www.hackerrank.com/"> Hackerrank </a> to practise competitive programming and get started. 
-        Also check out <a href="."> "An introduction to competitive programming"</a>, a talk session held at BTUI'20. 
+        Also check out <a href="https://www.youtube.com/watch?v=UlOvJVUPk08"> "An introduction to competitive programming"</a>, a talk session held at BTUI'20. 
         Get ready wizards! Lets code...</p>
         <hr className="bg-light my-4" size="1" />
         <p>Click the below button to enter the competition, you will be redirected to the official competition platform.</p>
