@@ -170,3 +170,17 @@
         transform: translateY(-2000px);
     }
 }
+
+.armrulesDiv {
+    color: white;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 2rem;
+}
+
+.armInstructions>h2 {
+    margin-top: 2rem;
+    color: white;
+    text-align: center;
+}
