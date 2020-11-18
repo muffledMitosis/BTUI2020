@@ -12,7 +12,7 @@ function Dashbash() {
         <h1 className="display-2 mb-4">Dash-Bash</h1>
         <p className="lead"><strong>Dash-Bash</strong> is a challenge on creating the best Flutter app. This is the time to test and sharp your Flutter skills. Don't know where to start? 
         Go to official <a href="https://flutter.dev/docs/get-started/install"> Flutter Docs </a> to get started.
-        Check out <a href="."> "Get onboard with app development with Flutter"</a>, a talk session held at BTUI'20.
+        Check out <a href="https://www.youtube.com/watch?v=vbdYrXQAubk"> "Get onboard with app development with Flutter"</a>, a talk session held at BTUI'20.
         Also check out the <a href="https://github.com/dilum1995/RC-flutter-session"> Dash-Bash Challenge Resource </a> project. Get ready folks! Lets Flutter...</p>
         <hr className="bg-light my-4" size="1" />
         <h5 className="text-light">Challenge Rules & Instructions,</h5>
